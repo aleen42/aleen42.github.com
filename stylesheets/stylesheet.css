@@ -7,7 +7,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif, "黑体";
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71; }
+  color: #606c71; 
+  overflow-x:hidden;}
+
+
 
 a {
   color: #1e6bb8;
@@ -53,15 +56,31 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
+/* banner */
+.banner{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:600px;overflow:hidden}
+/*.banner .tel{position:relative;left:800px;width:307px;height:31px;float:left;line-height:30px; background-image:url(../img/tel.png); z-index:99; text-align:center}*/
+.banner ul{position:absolute;width:1920px;height:600px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.banner ul li{float:left;left:0px;width:1920px;height:600px}
+.banner .b_prev,.banner .b_next{z-index:2;position:absolute;display:block;width:38px;height:78px;top:250px;border-radius:5px;filter:alpha(opacity=40);opacity:0.4}
+.banner .b_prev{left:400px;background:url(../pic/bg.gif) 0 -191px no-repeat}
+.banner .b_next{right:400px;background:url(../pic/bg.gif) -38px -191px no-repeat}
+.banner .b_prev:hover,.banner .b_next:hover{filter:alpha(opacity=70);opacity:0.7}
+.banner .b_push{z-index:2;position:absolute;bottom:30px}
+.banner .b_push a{width:15px;height:15px;border-radius:8px;overflow:hidden;display:inline;float:left;margin-left:5px;background:#C4C4C4}
+.banner .b_push a:hover{background:#A0A0A0}
+.banner .b_push a.on{background:#60b17c}
+
 .page-header {
   color:#FFF;
   text-align: center;
   position:relative;
   left:50%;
+  margin-bottom:0px;
   margin-left:-960px;width:1920px;
-  height:600px;
+  height:400px;
 /*  background-image: linear-gradient(120deg, #155799, #159957); */
-  background-image:url(../pic/page_header.png); }
+  background-image:url(../pic/page_header.gif); 
+  z-index:99}
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -76,23 +95,23 @@ a {
     padding: 2rem 1rem; } }
 
 .project-name {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 0.1rem; }
 
 @media screen and (min-width: 64em) {
   .project-name {
-    font-size: 3.25rem; } }
+    font-size: 6rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-name {
-    font-size: 2.25rem; } }
+    font-size: 4rem; } }
 
 @media screen and (max-width: 42em) {
   .project-name {
-    font-size: 1.75rem; } }
+    font-size: 2rem; } }
 
 .project-tagline {
-  margin-bottom: 90px;
+  margin-bottom: 0px;
   font-weight: normal;
   opacity: 1; }
 
