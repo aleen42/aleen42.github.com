@@ -70,6 +70,89 @@ a {
 .banner .b_push a:hover{background:#A0A0A0}
 .banner .b_push a.on{background:#60b17c}
 
+/* banner-resume */
+.banner-resume{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:600px;overflow:hidden}
+.banner-resume .tel{position:relative;left:400px;width:400px;height:31px;float:left;line-height:30px; background-image:url(../pic/tel.png); z-index:99; font-size:18px; text-align:center}
+.banner-resume ul{position:absolute;width:1920px;height:600px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.banner-resume ul li{float:left;left:0px;width:1920px;height:600px}
+
+/* first-page */
+.first-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:765px;overflow:hidden}
+.first-page  ul{position:absolute;width:1920px;height:765px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.first-page ul li{float:left;left:0px;width:1920px;height:765px}
+
+/* second-page */
+.second-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:1236px;overflow:hidden}
+.second-page  ul{position:absolute;width:1920px;height:1236px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.second-page ul li{float:left;left:0px;width:1920px;height:1236px}
+
+/* third-page */
+.third-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:1471px;overflow:hidden}
+.third-page  ul{position:absolute;width:1920px;height:1471px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.third-page ul li{float:left;left:0px;width:1920px;height:1471px}
+
+/* fourth-page */
+.fourth-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:1537px;overflow:hidden}
+.fourth-page  ul{position:absolute;width:1920px;height:1537px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
+.fourth-page ul li{float:left;left:0px;width:1920px;height:1537px}
+
+.page-header-resume {
+  color:#FFF;
+  text-align: center;
+  position:relative;
+  left:50%;
+  margin-bottom:0px;
+  margin-left:-960px;width:1920px;
+  height:400px;
+/*  background-image: linear-gradient(120deg, #155799, #159957); */
+  background-image:url(../pic/page_header_resume.gif); 
+  z-index:99}
+
+@media screen and (min-width: 64em) {
+  .page-header-resume {
+    padding: 5rem 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .page-header-resume {
+    padding: 3rem 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .page-header-resume {
+    padding: 2rem 1rem; } }
+
+.project-name-resume {
+  margin-top: 50px;
+  margin-bottom: 0.1rem; }
+
+@media screen and (min-width: 64em) {
+  .project-name-resume {
+    font-size: 6rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-name-resume {
+    font-size: 4rem; } }
+
+@media screen and (max-width: 42em) {
+  .project-name-resume {
+    font-size: 2rem; } }
+
+.project-tagline-resume {
+  margin-bottom: 0px;
+  font-weight: normal;
+  opacity: 1; }
+
+@media screen and (min-width: 64em) {
+  .project-tagline-resume {
+    font-size: 2.5rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-tagline-resume {
+    font-size: 1.15rem; } }
+
+@media screen and (max-width: 42em) {
+  .project-tagline-resume {
+    font-size: 1rem; } }
+
 .page-header {
   color:#FFF;
   text-align: center;
