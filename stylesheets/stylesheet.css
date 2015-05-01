@@ -58,7 +58,7 @@ a {
 
 /* banner */
 .banner{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:600px;overflow:hidden}
-/*.banner .tel{position:relative;left:800px;width:307px;height:31px;float:left;line-height:30px; background-image:url(../img/tel.png); z-index:99; text-align:center}*/
+.banner .tel{position:relative;left:400px;width:400px;height:31px;float:left;line-height:30px; background-image:url(../pic/tel.png); z-index:99; font-size:18px; text-align:center}
 .banner ul{position:absolute;width:1920px;height:600px;overflow:hidden;list-style:none;-webkit-padding-start:0px;  -webkit-margin-before:0px;-webkit-margin-after:0px}
 .banner ul li{float:left;left:0px;width:1920px;height:600px}
 .banner .b_prev,.banner .b_next{z-index:2;position:absolute;display:block;width:38px;height:78px;top:250px;border-radius:5px;filter:alpha(opacity=40);opacity:0.4}
