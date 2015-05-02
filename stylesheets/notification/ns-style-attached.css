@@ -1,7 +1,6 @@
 /* Growl-style notifications */
 .ns-attached {
-    left: 170px;
-	height:100px;
+    left: 120px;
     max-width: 400px;
 	z-index: 3;
 }

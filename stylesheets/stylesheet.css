@@ -59,7 +59,7 @@ a {
       margin-left: 0; } }
 
 /* Navigation */
-.Navigation_Button{position:absolute;margin-left:364px;margin-top:-160px;width:auto;font-size:20px;font-family:Arial}
+.Navigation_Button{position:absolute;margin-left:364px;margin-top:-140px;width:auto;font-size:20px;font-family:Arial}
 .Navigation_Bar_List a {color: #60b17c;text-decoration: none; } 
 .Navigation_Bar_List a:hover {color: #47845c;text-decoration: none; }
 
