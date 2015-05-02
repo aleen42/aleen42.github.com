@@ -59,9 +59,13 @@ a {
       margin-left: 0; } }
 
 /* Navigation */
-.Navigation_Button{position:absolute;margin-left:368px;margin-top:-180px;width:auto;font-size:20px;font-family:Arial}
+.Navigation_Button{position:absolute;margin-left:364px;margin-top:-160px;width:auto;font-size:20px;font-family:Arial}
 .Navigation_Bar_List a {color: #60b17c;text-decoration: none; } 
 .Navigation_Bar_List a:hover {color: #47845c;text-decoration: none; }
+
+/* Notification */
+.Notification_Button{position:absolute;margin-left:1230px;margin-top:-350px;font-size:20px;font-family:Arial;z-index:2;background:url(../pic/chain.png);width:27px;height:282px;}
+
 /* banner */
 .banner{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:600px;overflow:hidden}
 .banner .tel{position:relative;left:400px;width:400px;height:31px;float:left;line-height:30px; background-image:url(../pic/tel.png); z-index:99; font-size:18px; text-align:center}
@@ -112,7 +116,7 @@ a {
   height:400px;
 /*  background-image: linear-gradient(120deg, #155799, #159957); */
   background-image:url(../pic/page_header_resume.gif); 
-  z-index:99}
+  z-index:2}
 
 @media screen and (min-width: 64em) {
   .page-header-resume {
@@ -169,7 +173,7 @@ a {
   height:400px;
 /*  background-image: linear-gradient(120deg, #155799, #159957); */
   background-image:url(../pic/page_header.gif); 
-  z-index:99}
+  z-index:2}
 
 @media screen and (min-width: 64em) {
   .page-header {

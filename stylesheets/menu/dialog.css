@@ -15,11 +15,12 @@
 	-webkit-justify-content: center;
 	justify-content: center;
 	pointer-events: none;
+	z-index: 5;
 }
 
 .dialog__overlay {
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
 	background: rgba(0, 0, 0, 0.9);
 	opacity: 0;
 	-webkit-transition: opacity 0.3s;
