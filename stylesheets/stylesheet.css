@@ -18,6 +18,7 @@ a {
   a:hover {
     text-decoration: underline; }
 
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -55,6 +56,10 @@ a {
     .btn + .btn {
       margin-top: 1rem;
       margin-left: 0; } }
+
+/* Navigation */
+.Navigation_Button{position:absolute;margin-left:368px;margin-top:-180px;width:auto;font-size:20px;font-family:Arial}
+.Navigation_Bar_List a {color: #60b17c;text-decoration: none; }a:hover {text-decoration: none; }
 
 /* banner */
 .banner{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:600px;overflow:hidden}
