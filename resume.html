@@ -8,6 +8,10 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/menu/dropdown.css" />
+	<script src="js/menu/snap.svg-min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/kefu.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -18,6 +22,73 @@
   <body>
     <section class="page-header-resume">
       <h1 class="project-name-resume" style="font-family: Arial">ALEEN42</h1>
+      <!--menu-->
+                        <nav id="menu" class="menu" >
+                            <div class="morph-shape" data-morph-open="M260,500H0c0,0,8-120,8-250C8,110,0,0,0,0h260c0,0-8,110-8,250C252,380,260,500,260,500z">
+                                <svg width="100%" height="100%" viewBox="0 0 260 500" preserveAspectRatio="none">
+                                    <path fill="none" d="M260,500H0c0,0,0-120,0-250C0,110,0,0,0,0h260c0,0,0,110,0,250C260,380,260,500,260,500z"/>
+                                </svg>
+                            </div>
+                            <button class="menu__label" style="font-family:Arial"><i class="fa fa-fw fa-bars"></i>Navigation Bar</button>
+                            <ul class="menu__inner">
+                                <li style="font-family:Arial"><a href="https://www.baidu.com"><i class="fa fa-fw fa-bookmark-o"></i>HOME</a></li>
+                            </ul>
+                        </nav>
+            <script src="js/menu/classie.js"></script>
+            <script>
+                (function() {
+    
+                    function SVGDDMenu( el, options ) {
+                        this.el = el;
+                        this.init();
+                    }
+    
+                    SVGDDMenu.prototype.init = function() {
+                        this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+    
+                        var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+                        this.pathEl = s.select( 'path' );
+                        this.paths = {
+                            reset : this.pathEl.attr( 'd' ),
+                            open : this.shapeEl.getAttribute( 'data-morph-open' )
+                        };
+    
+                        this.isOpen = false;
+    
+                        this.initEvents();
+                    };
+    
+                    SVGDDMenu.prototype.initEvents = function() {
+                        this.el.addEventListener( 'click', this.toggle.bind(this) );
+                            
+                        // For Demo purposes only
+                        [].slice.call( this.el.querySelectorAll('a') ).forEach( function(el) {
+                            el.onclick = function() { return false; }
+                        } );
+                    };
+    
+                    SVGDDMenu.prototype.toggle = function() {
+                        var self = this;
+    
+                        if( this.isOpen ) {
+                            classie.remove( self.el, 'menu--open' );
+                        }
+                        else {
+                            classie.add( self.el, 'menu--open' );
+                        }
+    
+                        this.pathEl.stop().animate( { 'path' : this.paths.open }, 320, mina.easeinout, function() {
+                            self.pathEl.stop().animate( { 'path' : self.paths.reset }, 1000, mina.elastic );
+                        } );
+    
+                        this.isOpen = !this.isOpen;	
+                    };
+    
+                    new SVGDDMenu( document.getElementById( 'menu' ) );
+    
+                })();
+            </script>
+        <!--menu-->
       <!--<h2 class="project-tagline-resume" style="font-family: '黑体'">徐沛文</h2>-->
     </section>
     <!--banner-->
