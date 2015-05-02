@@ -27,6 +27,11 @@ button {
 	background: none;
 }
 
+button:hover
+{
+	color: #47845c;
+}
+
 .content {
 	max-width: 1000px;
 	padding: 0 1em;
