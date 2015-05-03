@@ -27,6 +27,12 @@
 	<script src="js/notification/modernizr.custom.js"></script>
     <!--notification-->
     
+    <!--bottom_menu-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bottom_menu/demo.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/bottom_menu/component2.css" />
+	<script src="js/bottom_menu/modernizr-2.6.2.min.js"></script>
+    <!--bottom_menu-->
+    
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/kefu.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -101,7 +107,7 @@
                         	<div class="Navigation_Bar_List">
                             	<a href="./resume.html"><button style="margin-right:20px; color:#000; cursor:default">Home</button><button style="margin-right:20px">Resume</button></a>
                             </div>
-                        </h2><button class="action" data-dialog-close>Close</button>
+                        </h2><button class="action" data-dialog-close style="margin-top:20px;">Close</button>
 					</div>
 			</div>
             <script src="js/menu/classie.js"></script>
@@ -183,7 +189,22 @@
                 })();
             </script>-->
         <!--menu-->
-       
+       	<!--bottom_menu-->
+			<!-- Start Nav Structure -->
+				<button class="cn-button" id="cn-button">Menu</button>
+				<div class="cn-wrapper" id="cn-wrapper">
+					<ul>
+						<li><a href="./index.html"><span>About</span></a></li>
+						<li><a href="./index.html"><span>Tutorials</span></a></li>
+						<li><a href="./index.html"><span>Articles</span></a></li>
+						<li><a href="./index.html"><span>Snippets</span></a></li>
+						<li><a href="./index.html"><span>Plugins</span></a></li>
+					 </ul>
+				</div>
+			<!-- End of Nav Structure -->	
+            <script src="js/bottom_menu/polyfills.js"></script>
+			<script src="js/bottom_menu/demo2.js"></script>
+        <!--bottom_menu-->    
     </section>
     <!--banner-->
         <section class="banner" style="font-size:0">
@@ -236,7 +257,7 @@ How to run a light-weight company?</h3>
 
 <p>Having questions with me? Just dialing my phone <b>+86 -18575893728</b> or sending an email to me <a href="mailto:408503598@qq.com">408503598@qq.com</a> and I’ll try my best to answer your questions.</p>
 
-      <footer class="site-footer">
+      <footer class="site-footer" style="margin-bottom:100px">
 
         <span class="site-footer-credits">This page was powered by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
