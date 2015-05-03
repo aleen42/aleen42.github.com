@@ -23,6 +23,12 @@
 	<!--<script src="js/menu/snap.svg-min.js"></script>-->
     <!--menu-->
     
+    <!--bottom_menu-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bottom_menu/demo.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/bottom_menu/component2.css" />
+	<script src="js/bottom_menu/modernizr-2.6.2.min.js"></script>
+    <!--bottom_menu-->
+    
     <!--notification-->
     <link rel="stylesheet" type="text/css" href="stylesheets/notification/ns-default.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/notification/ns-style-attached.css" />
@@ -95,7 +101,7 @@
                             	<a href="./index.html"><button style="margin-right:20px">Home</button></a>
                             	<button style="margin-right:20px; color:#000; cursor:default">Resume</button>  
                             </div>
-                        </h2><button class="action" data-dialog-close>Close</button>
+                        </h2><button class="action" data-dialog-close style="margin-top:20px;">Close</button>
 					</div>
 			</div>
             <script src="js/menu/classie.js"></script>
@@ -175,11 +181,24 @@
                     new SVGDDMenu( document.getElementById( 'menu' ) );
     
                 })();
-            </script>-->
-            
-            
-            
+            </script>-->         
         <!--menu-->
+        <!--bottom_menu-->
+			<!-- Start Nav Structure -->
+				<button class="cn-button" id="cn-button">Menu</button>
+				<div class="cn-wrapper" id="cn-wrapper">
+					<ul>
+						<li><a href='javascript:history.go(-1)'><button>Back</button></a></li>
+                        <li><a href="./index.html"><button>Home</button></a></li>
+                        <li><a href="javascript:history.go(0)"><button>Refresh</button></a></li>
+                        <li><a href="./resume.html"><button>About</button></a></li>
+                        <li><a href='javascript:history.go(1)'><button>Next</button></a></li>
+					 </ul>
+				</div>
+			<!-- End of Nav Structure -->	
+            <script src="js/bottom_menu/polyfills.js"></script>
+			<script src="js/bottom_menu/demo2.js"></script>
+        <!--bottom_menu-->  
       <!--<h2 class="project-tagline-resume" style="font-family: '黑体'">徐沛文</h2>-->
     </section>
     <!--banner-->
