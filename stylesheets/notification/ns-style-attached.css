@@ -1,9 +1,24 @@
 /* Growl-style notifications */
 .ns-attached {
-    left: 120px;
-    max-width: 400px;
+    
 	z-index: 3;
 }
+@media screen and (min-width: 64em) {
+.ns-attached
+{
+	left: 80px;
+	max-width: 400px;
+	}
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+.ns-attached
+{
+	left: 0px;
+	max-width: 300px;
+	}
+}
+	
 
 [class^="ns-effect-"].ns-attached.ns-hide,
 [class*=" ns-effect-"].ns-attached.ns-hide {
