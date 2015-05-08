@@ -243,7 +243,8 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957; }
+  font-size:40px;
+  color: #60b17c; }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
