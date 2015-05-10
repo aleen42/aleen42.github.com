@@ -25,6 +25,7 @@ button {
 	font-family:Arial;
 	color: #60b17c;
 	background: none;
+	transition: color 0.2s;
 }
 
 button:hover

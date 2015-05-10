@@ -81,11 +81,11 @@ a {
 	.banner .b_prev{left:500px;}
 	.banner .b_next{right:500px;}
 	}
-.banner .b_prev{background:url(../pic/bg.gif) 0 -191px no-repeat}
-.banner .b_next{background:url(../pic/bg.gif) -38px -191px no-repeat}
+.banner .b_prev{background:url(../pic/bg.gif) 0 -191px no-repeat; transition: opacity 0.2s, filter 0.2s;}
+.banner .b_next{background:url(../pic/bg.gif) -38px -191px no-repeat; transition: opacity 0.2s, filter 0.2s;}
 .banner .b_prev:hover,.banner .b_next:hover{filter:alpha(opacity=70);opacity:0.7}
 .banner .b_push{z-index:2;position:absolute;bottom:30px}
-.banner .b_push a{width:15px;height:15px;border-radius:8px;overflow:hidden;display:inline;float:left;margin-left:5px;background:#C4C4C4}
+.banner .b_push a{width:15px;height:15px;border-radius:8px;overflow:hidden;display:inline;float:left;margin-left:5px;background:#C4C4C4;transition: background 0.2s;}
 .banner .b_push a:hover{background:#A0A0A0}
 .banner .b_push a.on{background:#60b17c}
 
@@ -384,7 +384,7 @@ a {
     font-size: 0.9rem; } }*/
 
 /* go top */
-#gotop{z-index:999;width:50px;height:50px;filter:alpha(opacity=40);opacity:0.4;background:url(../pic/bg.gif) -110px -191px no-repeat;position:fixed;right:100px;bottom:50px;_position:absolute;
+#gotop{z-index:999;width:50px;height:50px;filter:alpha(opacity=40);opacity:0.4;background:url(../pic/bg.gif) -110px -191px no-repeat;position:fixed;right:100px;bottom:50px;_position:absolute;transition: opacity 0.2s, filter 0.2s;
 _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop)||0)-(parseInt(this.currentStyle.marginBottom)||0)-10))}
 #gotop:hover{filter:alpha(opacity=80);opacity:0.8}
 
