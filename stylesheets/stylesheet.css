@@ -245,13 +245,15 @@ a {
 .main-content img {
   max-width: 100%; }
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  margin-left:-50px;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  font-size:40px;
+  font-size:50px;
   color: #60b17c; }
 .main-content p {
-  margin-bottom: 0em; }
+  margin-bottom: 0em;
+  font-size:20px; }
 .main-content code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
