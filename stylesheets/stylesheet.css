@@ -263,7 +263,7 @@ a {
   border-radius: 0.3rem; }
 .main-content pre {
   padding: 0.8rem;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
   color: #567482;
