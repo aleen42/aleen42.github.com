@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box; }
   
+ 
 /* webkit, opera, IE9 */
 ::selection { background:#60b17c; color:#fff;}
 /* mozilla firefox */
@@ -374,7 +375,7 @@ a {
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: solid 1px #eff0f1;
+  border-top: solid 1px #60b17c;
   font-size: 1rem; }
 
 .site-footer-owner {
