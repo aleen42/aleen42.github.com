@@ -97,7 +97,7 @@ a {
 .banner-resume ul li{float:left;left:0px;width:1920px;height:600px}
 
 /* tail */
-.tail{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:400px;}
+.tail{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:270px;}
 
 /* first-page */
 .first-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:765px;overflow:hidden}
