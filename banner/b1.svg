@@ -46,7 +46,22 @@
 		<animateTransform attributeName="transform"
 			attributeType="XML"
 			type="scale"
-			values="1; 1.1; 1"
+			values="1; 1.06; 1"
+			keyTimes="0; 0.138; 1"
+			dur="1s"
+			additive="sum"  
+			repeatCount="indefinite"/>
+		<animate attributeName="opacity"
+		   values="0; 0.6; 0"
+		   dur="1s"
+		   keyTimes="0; 0.138; 1"
+		   repeatCount="indefinite"/>
+	</use>
+	<use x="0" y="0" xlink:href="#github">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="scale"
+			values="1; 0.9; 1"
 			keyTimes="0; 0.138; 1"
 			dur="1s"
 			additive="sum"  
@@ -57,7 +72,6 @@
 		   keyTimes="0; 0.138; 1"
 		   repeatCount="indefinite"/>
 	</use>
-	
 	<g>
 		<path style="fill:#60B17C;" d="M239.768,73.714V57.033l60.227-0.097v52.76c-9.247,7.37-18.783,12.915-28.61,16.632
 			c-9.829,3.718-19.915,5.576-30.259,5.576c-13.966,0-26.655-2.989-38.067-8.97c-11.412-5.979-20.027-14.629-25.847-25.943
