@@ -20,12 +20,47 @@
         additive="sum"  
         repeatCount="indefinite"/>
     <animate attributeName="opacity"
-       values="1; 0.8; 0"
+       values="1; 1; 0"
        dur="5.8s"
 	   keyTimes="0; 0.138; 1"
        repeatCount="indefinite"/>
 </use>
 
+<use x="0" y="0" opacity="0" xlink:href="#A" >
+    <animateTransform attributeName="transform"
+        attributeType="XML"
+        type="scale"
+        values="1; 4; 20"
+		keyTimes="0; 0.05; 1"
+		begin="2.5s"
+        dur="10s"
+        additive="sum"  
+        repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+       values="1; 1; 0"
+       dur="10s"
+	   begin="2.5s"
+	   keyTimes="0; 0.05; 1"
+       repeatCount="indefinite"/>
+</use>
+
+<use x="0" y="0" opacity="0" xlink:href="#A" >
+    <animateTransform attributeName="transform"
+        attributeType="XML"
+        type="scale"
+        values="1; 4; 20"
+		keyTimes="0; 0.05; 1"
+		begin="3.6s"
+        dur="10s"
+        additive="sum"  
+        repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+       values="1; 0.8; 0"
+       dur="10s"
+	   begin="3.6s"
+	   keyTimes="0; 0.05; 1"
+       repeatCount="indefinite"/>
+</use>
 <!--up-->
 <!--down-->
 <use x="0" y="0" opacity="0" xlink:href="#A">
@@ -50,7 +85,7 @@
 	<path style="fill:#60B17C;" d="M-97.688,101.324l79.119-206.02h29.371l84.319,206.02H64.064L40.033,38.927h-86.146l-22.625,62.396
 		H-97.688z M-38.243,16.723h69.844L10.1-40.333C3.541-57.664-1.332-71.904-4.515-83.054c-2.624,13.21-6.324,26.328-11.102,39.349
 		L-38.243,16.723z"/>
-	<path style="fill:#000;" d="M113.109,101.324v-206.02h25.295v206.02H113.109z"/>
+	<!--<path style="fill:#000;" d="M113.109,101.324v-206.02h25.295v206.02H113.109z"/>
 	<path style="fill:#000;" d="M279.779,53.261l26.139,3.232c-4.123,15.271-11.758,27.123-22.906,35.555
 		c-11.15,8.432-25.391,12.647-42.722,12.647c-21.83,0-39.138-6.722-51.926-20.166c-12.789-13.442-19.183-32.298-19.183-56.563
 		c0-25.107,6.464-44.595,19.393-58.461c12.929-13.865,29.698-20.799,50.31-20.799c19.955,0,36.258,6.794,48.904,20.377
@@ -69,6 +104,6 @@
 		c8.994,0,17.262,1.616,24.804,4.848c7.541,3.232,13.187,7.473,16.935,12.718c3.746,5.248,6.37,11.478,7.869,18.691
 		c0.936,4.686,1.405,12.882,1.405,24.593v91.768h-25.295V10.541c0-10.306-0.984-18.011-2.951-23.118
 		c-1.968-5.105-5.459-9.181-10.47-12.226c-5.013-3.043-10.892-4.567-17.637-4.567c-10.775,0-20.074,3.421-27.896,10.259
-		c-7.824,6.84-11.734,19.815-11.734,38.927v81.509H497.744z"/>
+		c-7.824,6.84-11.734,19.815-11.734,38.927v81.509H497.744z"/>-->
 </g>
 </svg>

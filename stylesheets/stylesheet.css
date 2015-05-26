@@ -105,6 +105,9 @@ a {
 
 /* tail */
 .tail{position:relative;left:50%;margin-left:-960px;width:1920px;z-index:1;height:270px;}
+.tail img{background-image:url(../pic/aleen.svg);background-position:-200px 20px;background-size:100%;background-repeat:no-repeat;}
+/* not shown for IE */
+.tail img{-ms-background-position-x:-1000px;}
 
 /* first-page */
 .first-page {position:relative;margin-bottom:0px;left:50%;margin-left:-960px;width:1920px;z-index:1;height:765px;overflow:hidden}
