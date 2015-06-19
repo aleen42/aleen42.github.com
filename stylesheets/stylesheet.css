@@ -67,6 +67,9 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }*/
 
+.social_button{z-index:99;width:20px;height:20px;filter:alpha(opacity=40);opacity:0.4;transition: opacity 0.2s, filter 0.2s;}
+.social_button:hover{filter:alpha(opacity=100);opacity:1}
+
 /* Navigation */
 .Navigation_Button{position:absolute;margin-left:364px;margin-top:-280px;width:auto;font-size:20px;font-family:Arial}
 .Navigation_Bar_List a {color: #60b17c;text-decoration: none; } 
