@@ -246,7 +246,7 @@
           <audio id="audio"></audio>
           <script>
 		    var audio = document.getElementById("audio");
-			
+			var song_name;
 			if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 			{
 				var num = 0;
@@ -296,7 +296,7 @@
 			function load_song()
 			{
 				audio.src = "bg_music/" + list[num];
-				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + list[num] + "</marquee>";
+				song_name = list[num];
 				num = (num + 1) % list.length;
 			}
 
@@ -304,7 +304,9 @@
 			//淡入效果
 			function play()
 			{
+				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + "Loading" + "</marquee>"
 				audio.play();	
+				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name + "</marquee>";
 				audio.volume = 0.01; 
 				setInterval(function()
 				{
@@ -343,7 +345,7 @@
 			}
         
         </script>
-        <!--music--> 
+        <!--music-->
       <!--<h2 class="project-tagline-resume" style="font-family: '黑体'">徐沛文</h2>-->
     </section>
     <!--banner-->
