@@ -73,6 +73,11 @@ a {
 .audio_div{z-index:2;width:20px;height:20px;filter:alpha(opacity=40);opacity:0.4;transition: opacity 0.3s, filter 0.3s;}
 .audio_div:hover{filter:alpha(opacity=100);opacity:1}
 
+.next_div{z-index:2;width:20px;height:20px;filter:alpha(opacity=40);opacity:0.4;transition: opacity 0.3s, filter 0.3s;}
+.next_div:hover{filter:alpha(opacity=100);opacity:1}
+
+.song_name{z-index:3;width:200px;height:40px;}
+
 /* Navigation */
 .Navigation_Button{position:absolute;margin-left:364px;margin-top:-280px;width:auto;font-size:20px;font-family:Arial}
 .Navigation_Bar_List a {color: #60b17c;text-decoration: none; } 
@@ -110,7 +115,7 @@ a {
 }
 
 
-.Notification_Button{-ms-animation:notification_button 20s;-ms-animation-iteration-count:infinite;-moz-animation:notification_button 20s;-moz-animation-iteration-count:infinite;-webkit-animation:notification_button 20s;-webkit-animation-iteration-count:infinite; position:absolute;margin-left:1230px;margin-top:-450px;font-size:20px;font-family:Arial;z-index:2;background:url(../pic/chain.png);width:27px;height:282px;}
+.Notification_Button{-ms-animation:notification_button 20s;-ms-animation-iteration-count:infinite;-moz-animation:notification_button 20s;-moz-animation-iteration-count:infinite;-webkit-animation:notification_button 20s;-webkit-animation-iteration-count:infinite; position:absolute;margin-left:1360px;margin-top:-450px;font-size:20px;font-family:Arial;z-index:2;background:url(../pic/chain.png);width:27px;height:282px;}
 
 /* banner */
 @-ms-keyframes tel /* IE */
