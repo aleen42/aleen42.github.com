@@ -272,7 +272,9 @@
             //播放器控制
 			$('.next_div').click(function(){
 				load_song();
-				play();
+				audio.addEventListener("canplaythrough", function () {
+					play();
+				}, false);
 			});
 			
             $('.audio_div').click(function(){
