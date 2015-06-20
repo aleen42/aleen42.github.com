@@ -256,7 +256,15 @@
 			if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 			{
 				audio.src = "bg_music/Mark Petrie - A New Day.mp3";
+				audio.addEventListener("canplaythrough", function () {
 				audio.play();
+				}, false);
+				
+				audio.addEventListener('ended', function () {
+				// Wait 500 milliseconds before next loop
+				setTimeout(function () { audio.play(); }, 500);
+				}, false);
+				
 			}
             //播放器控制
             $('.audio_div').click(function(){
