@@ -294,6 +294,7 @@
 			//加载歌
 			function load_song()
 			{
+				document.getElementsByClassName("song_name").item(1).setAttribute(left, "1230px");
 				document.getElementById("s_name").innerHTML = "<font style=\"font-size:16px;color:#000;\">" + "Loading..." + "</font>"
 				audio.src = "bg_music/" + list[num];
 				song_name = list[num];
@@ -305,6 +306,7 @@
 			function play()
 			{
 				audio.play();	
+				document.getElementsByClassName("song_name").item(1).setAttribute(left, "1160px");
 				document.getElementById("s_name").innerHTML = "<marquee scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name + "</marquee>";
 				audio.volume = 0.01; 
 				setInterval(function()
