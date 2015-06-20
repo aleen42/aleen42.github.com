@@ -249,11 +249,16 @@
             <script src="js/bottom_menu/polyfills.js"></script>
 			<script src="js/bottom_menu/demo2.js"></script>
         <!--bottom_menu-->  
-         <!--music-->
-          <div class="audio_div" style="left:1350px;margin-top:-350px;background:url(pic/pause_logo.png)"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
+        <!--music-->
+          <div class="song_name" id="s_name" style="left:1160px;margin-top:-328px"></div>
+          <div class="audio_div" style="left:1345px;margin-top:-10px;background:url(pic/pause_logo.png);"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
+          
+          <div class="next_div" style="left:1315px;margin-top:-20px;background:url(pic/next_logo.png);"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
+          
           <audio id="audio"></audio>
           <script>
 		    var audio = document.getElementById("audio");
+			
 			if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 			{
 				var num = 0;
@@ -263,24 +268,26 @@
 					'Jacoo - Vacuum (Instrumental).mp3',
 					'Jacoo - Towards the Light.mp3'
 				]
-				audio.src = "bg_music/" + list[num];
-				num = (num + 1) % list.length;
+				load_song();
 				audio.addEventListener("canplaythrough", function () {
-				play();
-				
+					play();
 				}, false);
 				
 				audio.addEventListener('ended', function () {
 				// Wait 2000 milliseconds before next loop
 				setTimeout(function () { 
-				audio.src = "bg_music/" + list[num]; 
-				num = (num + 1) % list.length; 
+				load_song();
 				play(); }, 2000);
 				}, false);
 			}
 			
-			
             //播放器控制
+			$('.next_div').click(function(){
+				load_song();
+				play();
+				
+			});
+			
             $('.audio_div').click(function(){
                 //防止冒泡
                 event.stopPropagation();
@@ -296,6 +303,15 @@
                 $('.audio_div').css("background","url(pic/play_logo.png) no-repeat center bottom");
                 audio.pause(); //暂停
             });
+		
+			//加载歌
+			function load_song()
+			{
+				audio.src = "bg_music/" + list[num];
+				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + list[num] + "</marquee>";
+				num = (num + 1) % list.length;
+			}
+
 			
 			//淡入效果
 			function play()
@@ -339,7 +355,7 @@
 			}
         
         </script>
-        <!--music--> 
+        <!--music-->
     </section>
     <!--banner-->
         <section class="banner" style="font-size:0">
