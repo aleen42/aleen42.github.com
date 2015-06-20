@@ -249,29 +249,42 @@
             <script src="js/bottom_menu/polyfills.js"></script>
 			<script src="js/bottom_menu/demo2.js"></script>
         <!--bottom_menu-->  
-        <!--music-->
+         <!--music-->
           <div class="audio_div" style="left:1350px;margin-top:-350px;background:url(pic/pause_logo.png)"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
+          <audio id="audio"></audio>
           <script>
-		    var audio = document.createElement("audio");
+		    var audio = document.getElementById("audio");
 			if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 			{
-				audio.src = "bg_music/Mark Petrie - A New Day.mp3";
+				var num = 0;
+				var list =
+				[ 
+					'Mark Petrie - A New Day.mp3',
+					'Jacoo - Vacuum (Instrumental).mp3'
+					
+				]
+				audio.src = "bg_music/" + list[num];
+				num = (num + 1) % list.length;
 				audio.addEventListener("canplaythrough", function () {
-				audio.play();
+				play();
+				
 				}, false);
 				
 				audio.addEventListener('ended', function () {
-				// Wait 500 milliseconds before next loop
-				setTimeout(function () { audio.play(); }, 500);
+				// Wait 2000 milliseconds before next loop
+				setTimeout(function () { 
+				audio.src = "bg_music/" + list[num]; 
+				num = (num + 1) % list.length; 
+				play(); }, 2000);
 				}, false);
-				
 			}
+			
+			
             //播放器控制
             $('.audio_div').click(function(){
                 //防止冒泡
                 event.stopPropagation();
                 if(audio.paused) //如果当前是暂停状态
-        
                 {
                     $('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
                     audio.play();//播放
@@ -282,11 +295,51 @@
         
                 $('.audio_div').css("background","url(pic/play_logo.png) no-repeat center bottom");
                 audio.pause(); //暂停
-        
             });
+			
+			//淡入效果
+			function play()
+			{
+				audio.play();	
+				audio.volume = 0.01; 
+				setInterval(function()
+				{
+					var volume = audio.volume;
+					if(!volume)
+					{
+						return;
+					}
+				
+					if(volume >= 1.0)
+					{
+						return;
+					}
+				
+					if(volume)
+					{
+						audio.volume += 0.01;
+					}
+				}, 100);
+			}
+			
+			function pause()
+			{	
+				setInterval(function()
+				{
+					var volume_x = audio.volume;
+					if(volume_x <= 0.01)
+					{
+						return;
+					}
+					if(volume_x)
+					{
+						audio.volume -= 0.01;
+					}
+				}, 10);
+			}
         
         </script>
-        <!--music-->  
+        <!--music--> 
     </section>
     <!--banner-->
         <section class="banner" style="font-size:0">
