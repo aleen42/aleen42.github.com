@@ -92,6 +92,8 @@
       <!--behance-->
         <div class="social_button" style="left:550px;margin-top:-20px;"><a href="https://www.behance.net/aleen42" title="Behance" target="_blank"><img src="pic/behance_logo.png"></img></a></div>
       <!--behance-->
+      
+      
       <!--<h2 class="project-tagline" style="font-family: '黑体'">徐沛文</h2>-->
       	<!--notification-->
        	<div class="Notification_Button">
@@ -246,7 +248,33 @@
 			<!-- End of Nav Structure -->	
             <script src="js/bottom_menu/polyfills.js"></script>
 			<script src="js/bottom_menu/demo2.js"></script>
-        <!--bottom_menu-->    
+        <!--bottom_menu-->  
+        <!--music-->
+          <div class="audio_div" style="left:1350px;margin-top:-350px;background:url(pic/pause_logo.png)"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
+          <audio src="bg_music/Mark Petrie - A New Day.mp3" id="background_music" loop=true autoplay="return true;" ></audio>
+          <script>
+            //播放器控制
+            var audio = document.getElementById('background_music');
+            $('.audio_div').click(function(){
+                //防止冒泡
+                event.stopPropagation();
+                if(audio.paused) //如果当前是暂停状态
+        
+                {
+                    $('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
+                    audio.play();//播放
+                    return;
+                }
+                
+                //当前是播放状态
+        
+                $('.audio_div').css("background","url(pic/play_logo.png) no-repeat center bottom");
+                audio.pause(); //暂停
+        
+            });
+        
+        </script>
+        <!--music-->  
     </section>
     <!--banner-->
         <section class="banner" style="font-size:0">
