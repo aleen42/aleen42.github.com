@@ -296,7 +296,7 @@
 			function load_song()
 			{
 				audio.src = "bg_music/" + list[num];
-				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"3\">" + list[num] + "</marquee>";
+				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + list[num] + "</marquee>";
 				num = (num + 1) % list.length;
 			}
 
