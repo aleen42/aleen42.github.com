@@ -273,7 +273,6 @@
 			$('.next_div').click(function(){
 				load_song();
 				play();
-				
 			});
 			
             $('.audio_div').click(function(){
@@ -295,6 +294,7 @@
 			//加载歌
 			function load_song()
 			{
+				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + "Loading..." + "</marquee>"
 				audio.src = "bg_music/" + list[num];
 				song_name = list[num];
 				num = (num + 1) % list.length;
@@ -304,7 +304,6 @@
 			//淡入效果
 			function play()
 			{
-				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + "Loading" + "</marquee>"
 				audio.play();	
 				document.getElementById("s_name").innerHTML = "<marquee id=\"s_name\" scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name + "</marquee>";
 				audio.volume = 0.01; 
