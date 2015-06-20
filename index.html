@@ -321,7 +321,7 @@
 			{
 				audio.play();	
 				$('.song_name').css("left","1160px");
-				document.getElementById("s_name").innerHTML = "<marquee scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name + "</marquee>";
+				document.getElementById("s_name").innerHTML = "<marquee scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name.substr(0, song_name.length - (song_name.length - song_name.indexOf('.'))) + "</marquee>";
 				audio.volume = 0.01; 
 				setInterval(function()
 				{
