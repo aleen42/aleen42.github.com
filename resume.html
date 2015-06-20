@@ -254,7 +254,8 @@
 				[ 
 					'Mark Petrie - A New Day.mp3',
 					'Jacoo - Vacuum (Instrumental).mp3',
-					'Jacoo - Towards the Light.mp3'
+					'Jacoo - Towards the Light.mp3',
+					'Jacoo - In the Shadows... Looking For a Light.mp3'
 				]
 				load_song();
 				audio.addEventListener("canplaythrough", function () {
@@ -309,7 +310,7 @@
 			{
 				audio.play();	
 				$('.song_name').css("left","1160px");
-				document.getElementById("s_name").innerHTML = "<marquee scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + song_name.substr(0, song_name.length - (song_name.length - song_name.indexOf('.'))) + "</marquee>";
+				document.getElementById("s_name").innerHTML = "<marquee scrollamount=\"2\" style=\"font-size:16px;color:#000;\">" + "<b style=\"font-size:20px;\">" + (num == 0? list.length:num) + "/" + list.length + "</b>" + "\&nbsp;\&nbsp;\&nbsp;" + song_name.substr(0, song_name.length - (song_name.length - song_name.indexOf('.'))) + "</marquee>";
 				audio.volume = 0.01; 
 				setInterval(function()
 				{
