@@ -239,10 +239,14 @@
         <!--bottom_menu--> 
         <!--music-->
           <div class="audio_div" style="left:1350px;margin-top:-350px;background:url(pic/pause_logo.png)"><a href="javascript:void(0)"><img src="pic/empty.png"></img></a></div>
-          <audio src="bg_music/Mark Petrie - A New Day.mp3" id="background_music" loop="loop" autoplay="autoplay" ></audio>
           <script>
+		    var audio = document.createElement("audio");
+			if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
+			{
+				audio.src = "bg_music/Mark Petrie - A New Day.mp3";
+				audio.play();
+			}
             //播放器控制
-            var audio = document.getElementById('background_music');
             $('.audio_div').click(function(){
                 //防止冒泡
                 event.stopPropagation();
