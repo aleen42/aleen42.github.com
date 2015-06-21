@@ -3,17 +3,13 @@ var song_name;
 if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 {
 	var num = Math.floor(Math.random()*4);
-	var fso = new ActiveXObject("Scripting.FileSystemObject");
-	var path = "./bg_music";
-	var directory = fso.GetFolder(path);
-	var fc = new Enumerator(directory.files);
-	var list = [];
-	var i = 0;
-	for(; !fc.atEnd(); fc.moveNext())
-	{
-		list[i++] = fc.item().name;
-	}
-	
+	list=
+	[
+		'Mark Petrie - A New Day.mp3',
+		'Jacoo - Vacuum (Instrumental).mp3',
+		'Jacoo - Towards the Light.mp3',
+		'Jacoo - In the Shadows... Looking For a Light.mp3'
+	]
 	load_song();
 	audio.addEventListener("canplaythrough", function () {
 	play();
