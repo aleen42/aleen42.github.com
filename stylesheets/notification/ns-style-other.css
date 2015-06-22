@@ -23,7 +23,7 @@
 .ns-effect-cornerexpand {
 	width: 120px;
 	height: 100px;
-	background: rgba(0,0,0,0.5);
+	background: url(../../pic/INFO.png);
 	text-align: center;
 	position: relative;
 	z-index: 1;
