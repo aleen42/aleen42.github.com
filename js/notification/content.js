@@ -15,7 +15,7 @@
 	// create the notification
 	var notification = new NotificationFx({
 	/*<b style="color:#60b17c;">Chrome</b>*/
-		message : '<font style="font-size:16px;">Thank you for coming to my page. Bugs of <b style="color:#60b17c;">IE</b> have been solved. I\'m so sorry that the website is temporarily not designed for <b style="color:#60b17c;">Phones</b> to visit. <b style="color:#60b17c;">SVG</b> animation is not yet supported by IE, while <b style="color:#60b17c;">CSS</b> animation is well supported by <b style="color:#60b17c;">IE</b>, <b style="color:#60b17c;">Firefox</b> and <b style="color:#60b17c;">Chrome</b>.</font>',
+		message : '<font style="font-size:16px;">Thank you for coming to my page. Bugs of <b style="color:#60b17c;">IE</b> have been solved. I\'m so sorry that the website is temporarily not designed for <b style="color:#60b17c;">Phones</b> to visit. <b style="color:#60b17c;">SVG</b> animation is not yet supported by IE, while <b style="color:#60b17c;">CSS</b> animation is well supported by <b style="color:#60b17c;">IE</b>, <b style="color:#60b17c;">Firefox</b> and <b style="color:#60b17c;">Chrome</b>. <b style="color:#60b17c;">Music Player</b> is now supported, and songs of the week will be updated each <b style="color:#60b17c;">Sunday</b>!</font>',
 		layout : 'attached',
 		effect : 'bouncyflip',
 		type : 'notice', // notice, warning or error
