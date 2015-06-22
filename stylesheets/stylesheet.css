@@ -79,6 +79,9 @@ a {
 .randon_div{z-index:2;width:20px;height:20px;filter:alpha(opacity=40);opacity:0.4;transition: opacity 0.3s, filter 0.3s;}
 .randon_div:hover{filter:alpha(opacity=100);opacity:1}
 
+.info_div{z-index:2;width:20px;height:20px;filter:alpha(opacity=40);opacity:0.4;transition: opacity 0.3s, filter 0.3s;}
+.info_div:hover{filter:alpha(opacity=100);opacity:1}
+
 .song_name{z-index:3;width:200px;height:40px;}
 
 /* Navigation */

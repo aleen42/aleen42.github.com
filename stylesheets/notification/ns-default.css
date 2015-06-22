@@ -3,7 +3,7 @@
 .ns-box {
 	position: fixed;
 	background: rgba(0,0,0,0.85);
-	padding: 22px;
+	padding: 20px;
 	line-height: 1.4;
 	z-index: 3;
 	pointer-events: none;
