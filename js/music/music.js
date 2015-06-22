@@ -38,6 +38,8 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 $('.next_div').click(function(){
 	load_song(1);
 	audio.addEventListener("canplaythrough", function () {
+		$('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
+		document.getElementById("play/pause").innerHTML = "<a href=\"javascript:void(0)\" title=\"Pause\"><img src=\"pic/empty.png\"></img></a>";
 		play();
 	}, false);
 });
@@ -45,6 +47,8 @@ $('.next_div').click(function(){
 $('.randon_div').click(function(){
 	load_song(Math.floor(Math.random()*list.length));
 	audio.addEventListener("canplaythrough", function () {
+		$('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
+		document.getElementById("play/pause").innerHTML = "<a href=\"javascript:void(0)\" title=\"Pause\"><img src=\"pic/empty.png\"></img></a>";
 		play();
 	}, false);
 });
