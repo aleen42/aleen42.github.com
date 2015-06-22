@@ -51,7 +51,7 @@ $('.randon_div').click(function(){
 			
 $('.audio_div').click(function(){
 	//防止冒泡
-	event.stopPropagation();
+	//event.stopPropagation();
 	if(audio.paused) //如果当前是暂停状态
 	{
     	$('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
