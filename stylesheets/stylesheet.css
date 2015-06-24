@@ -166,7 +166,7 @@ a {
 .banner .b_next{background:url(../pic/bg.gif) -38px -191px no-repeat; transition: opacity 0.2s, filter 0.2s;}
 .banner .b_prev:hover,.banner .b_next:hover{filter:alpha(opacity=70);opacity:0.7}
 .banner .b_push{z-index:2;position:absolute;bottom:30px}
-.banner .b_push a{width:15px;height:15px;border-radius:8px;overflow:hidden;display:inline;float:left;margin-left:5px;background:#C4C4C4;transition: background 0.2s;}
+.banner .b_push a{width:15px;height:15px;border-radius:8px;-webkit-border-radius:8px;-ms-border-radius:8px;-moz-border-radius:8px;overflow:hidden;display:inline;float:left;margin-left:5px;background:#C4C4C4;transition: background 0.2s;}
 .banner .b_push a:hover{background:#A0A0A0}
 .banner .b_push a.on{background:#60b17c}
 
