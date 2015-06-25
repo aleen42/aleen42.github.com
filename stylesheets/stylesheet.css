@@ -452,8 +452,8 @@ a {
 
 .site-footer {
   padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px #60b17c;
+  margin-top: 100px;
+  /*border-top: solid 1px #60b17c;*/
   font-size: 1rem; }
 
 .site-footer-owner {

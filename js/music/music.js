@@ -97,7 +97,7 @@ function play()
 			return;
 		}
 				
-		if(volume >= 1.0)
+		if(volume >= 0.9)
 		{
 			return;
 		}
