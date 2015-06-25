@@ -106,7 +106,7 @@ $(function() {
 
 	// banner
 	(function(){
-		var time = 3000; // 滚动间隔时间
+		var time = 5000; // 滚动间隔时间
 		var len = $(".banner ul li").length;
 
 		if(len < 1) return false;
