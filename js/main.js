@@ -516,7 +516,7 @@ $(function() {
 	(function(){
 		var sw = false;
 		$(window).scroll(function() {
-			if($(window).scrollTop() >= 200) {
+			if($(window).scrollTop() >= 400) {
 				if(!sw) {
 					sw = true;
 					$("body").append('<a id="gotop" href="javascript:;"></a>');
