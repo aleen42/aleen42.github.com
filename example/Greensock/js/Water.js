@@ -16,7 +16,7 @@ var play = function(circle, rectangle, rain){
 	
 	
 	t.set(rain, {
-		x: Math.floor(Math.random() * 400),
+		x: Math.floor(Math.random() * 300),
 		y: Math.floor(Math.random() * 120)
 	});
 	
@@ -49,14 +49,20 @@ var play = function(circle, rectangle, rain){
 		alpha: 0
 	});
 	
+	r_x = Math.floor(Math.random() * 5) + 10;
+	
 	t.to(circle, 1.5, {
 		attr: {
-			rx: '+=15',
-			ry: '+=5'
+			rx: '+=' + r_x,
+			ry: '+=' + r_x/3
 		},
 		alpha: 0,
 		ease: Power1.easeInOut
 	}, '-=0.3');
+	
+	t.to([circle, rectangle], 5, {
+		
+		});
 	
 };
 
