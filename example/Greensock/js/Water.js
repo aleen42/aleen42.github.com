@@ -58,10 +58,6 @@ var play = function(circle, rectangle, rain){
 		ease: Power1.easeInOut
 	}, '-=0.3');
 	
-	t.to(circle, 4,{
-		
-	});
-	
 };
 
 var add = function(num){
@@ -78,4 +74,4 @@ var add = function(num){
 	}
 };
 
-add(100);
+add(80);
