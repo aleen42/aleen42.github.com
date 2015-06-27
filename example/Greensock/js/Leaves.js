@@ -59,7 +59,7 @@ var add = function(num){
 		le[i] = leave.cloneNode();
 		var pre = Math.random() * 360;
 		var next = pre + 360;
-		le[i].innerHTML = "<style>#leave_" + i +"{-webkit-transform-origin:center;-webkit-animation: rotate_Y "+ (Math.random() + 3) +"s;-webkit-animation-iteration-count:infinite;}@-webkit-keyframes rotate_Y{from {-webkit-transform: rotateY("+ pre + "deg);}to {-webkit-transform: rotateY("+ next + "deg);}}</style>";
+		le[i].innerHTML = "<style>#leave_" + i +"{-webkit-transform-origin:center;-webkit-transform: rotateY("+ pre + "deg);-webkit-animation: rotate_Y "+ (Math.random() + 3) +"s;-webkit-animation-iteration-count:infinite;}@-webkit-keyframes rotate_Y{from {-webkit-transform: rotateY("+ pre + "deg);}to {-webkit-transform: rotateY("+ next + "deg);}}</style>";
 		le[i].id = "leave_" + i;
 		lc[i] = leave_child.cloneNode();
 		le[i].appendChild(lc[i]);
