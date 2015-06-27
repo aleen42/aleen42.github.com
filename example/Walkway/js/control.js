@@ -7,4 +7,3 @@ var animation = new Walkway({
 });
 		
 animation.draw();
-		
