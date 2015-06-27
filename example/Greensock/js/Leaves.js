@@ -14,14 +14,14 @@ var animation = function(leave, leave_child){
 	
 	t.timeScale(1);
 
-	var time = 6 + Math.random()*6;
-	var height = Math.floor(Math.random() * 1500);
-	var distance = 1500;
+	var time = 10 + Math.random()*6;
+	var height = -80 + Math.floor(Math.random() * 800);
+	var distance = 1500 + Math.random() * 200;
 	var rota = Math.random() * 700;
 	var sc = 1 + Math.random()*2;
 	
 	t.set(leave, {
-		top: -200 + Math.random()*100,
+		top: -100 + Math.random()*800,
 		left: -200
 	});
 	
@@ -35,7 +35,7 @@ var animation = function(leave, leave_child){
 	}, '-=' + time);
 
 	t.to([leave, leave_child], time, {
-		top: '+=' + (2000 - height),
+		top: '+=' + height,
 		left: '+=' + distance,
 		scale: sc,
 		
@@ -61,4 +61,4 @@ var add = function(num){
 	}
 };
 
-add(15);
+add(18);
