@@ -5,5 +5,6 @@ var animation = new Walkway({
 		return t * t;
 	}
 });
-		
+
 animation.draw();
+
