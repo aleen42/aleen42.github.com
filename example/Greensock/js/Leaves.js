@@ -14,15 +14,20 @@ var animation = function(leave, leave_child){
 	
 	t.timeScale(1);
 
-	var time = 10 + Math.random()*6;
-	var height = -80 + Math.floor(Math.random() * 800);
+	var time = 10 + Math.random() * 15;
+	var height = 100 + Math.floor(Math.random() * 800);
 	var distance = 1500 + Math.random() * 200;
 	var rota = Math.random() * 700;
-	var sc = 1 + Math.random()*2;
+	var sc = 1 + Math.random() * 2;
 	
 	t.set(leave, {
-		top: -100 + Math.random()*800,
-		left: -200
+		top: -100 + Math.random() * 250,
+		left: -200,
+		alpha: 0.7 + Math.random()
+	});
+	
+	t.set(leave_child, {
+		rotation: Math.random() * 360
 	});
 	
 	t.to([leave,leave_child], Math.random()* 4, {
@@ -52,7 +57,9 @@ var add = function(num){
 	for(i = 1; i < num; i++)
 	{
 		le[i] = leave.cloneNode();
-		le[i].innerHTML = "<style>#leave_" + i +"{-webkit-transform-origin:center;-webkit-animation: rotate_Y "+ (Math.random() + 3) +"s;-webkit-animation-iteration-count:infinite;}@-webkit-keyframes rotate_Y{from {-webkit-transform: rotateY(0deg);}to {-webkit-transform: rotateY(360deg);}}</style>";
+		var pre = Math.random() * 360;
+		var next = pre + 360;
+		le[i].innerHTML = "<style>#leave_" + i +"{-webkit-transform-origin:center;-webkit-animation: rotate_Y "+ (Math.random() + 3) +"s;-webkit-animation-iteration-count:infinite;}@-webkit-keyframes rotate_Y{from {-webkit-transform: rotateY("+ pre + "deg);}to {-webkit-transform: rotateY("+ next + "deg);}}</style>";
 		le[i].id = "leave_" + i;
 		lc[i] = leave_child.cloneNode();
 		le[i].appendChild(lc[i]);
@@ -61,4 +68,4 @@ var add = function(num){
 	}
 };
 
-add(18);
+add(20);
