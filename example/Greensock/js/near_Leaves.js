@@ -18,7 +18,7 @@ var animation = function(leave, leave_child){
 	var height = 100 + Math.floor(Math.random() * 800);
 	var distance = 1800 + Math.random() * 500;
 	var rota = Math.random() * 700;
-	var sc = 5 + Math.random() * 2;
+	var sc = 2 + Math.random() * 2;
 	
 	t.set(leave, {
 		top: -100 + Math.random() * 250,
@@ -68,4 +68,4 @@ var add = function(num){
 	}
 };
 
-add(7);
+add(3);
