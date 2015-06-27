@@ -16,14 +16,14 @@ var animation = function(leave, leave_child){
 
 	var time = 10 + Math.random() * 15;
 	var height = 100 + Math.floor(Math.random() * 800);
-	var distance = 1500 + Math.random() * 200;
+	var distance = 1800 + Math.random() * 500;
 	var rota = Math.random() * 700;
-	var sc = 1 + Math.random() * 2;
+	var sc = 5 + Math.random() * 2;
 	
 	t.set(leave, {
 		top: -100 + Math.random() * 250,
 		left: -200,
-		alpha: 0.7 + Math.random()
+		alpha: 0.9 + Math.random()
 	});
 	
 	t.set(leave_child, {
@@ -68,4 +68,4 @@ var add = function(num){
 	}
 };
 
-add(20);
+add(7);
