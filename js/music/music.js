@@ -11,13 +11,13 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'Jacool - Reincarnation.mp3',
-		'Jacoo - Vacuum (Instrumental).mp3',
-		'Jacoo - Towards the Light.mp3',
-		'Jacoo - In the Shadows... Looking For a Light.mp3',
-		'Jacoo - Nature\'s Way.mp3',
-		'Jacool - Peace Of Mind.mp3',
-		'Jacool,Oneira - Hurt.mp3'
+		'タイナカ彩智 - disillusion.mp3',
+		'川井宪次 - 冬の妖精.mp3',
+		'川井宪次 - 孤独な巡礼.mp3',
+		'川井宪次 - 今はその剣を置いて.mp3',
+		'川井宪次 - 骑士王の夸り.mp3',
+		'川井宪次 - 群雄疾走.mp3',
+		'川井宪次 - 鲜血の骑兵.mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
