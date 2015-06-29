@@ -22,7 +22,7 @@
 			// create the notification
 			var notification = new NotificationFx({
 				wrapper : svgshape,
-				message : '<b style="color:#60b17c;font-size:17px;position:absolute;top:10px;right:2px;">SONGS</b><p style="color:#60b17c;font-size:13px;position:absolute;top:30px;">OF THE WEEK</p><font style="color:rgba(0,0,0,1);font-size:10px;position:absolute;top:55px;right:2px;">Jun 21st, 2015</font>',
+				message : '<b style="color:#60b17c;font-size:17px;position:absolute;top:10px;right:2px;">SONGS</b><p style="color:#60b17c;font-size:13px;position:absolute;top:30px;">OF THE WEEK</p><font style="color:rgba(0,0,0,1);font-size:10px;position:absolute;top:55px;right:2px;">Jun 28st, 2015</font>',
 				layout : 'other',
 				effect : 'cornerexpand',
 				type : 'notice', // notice, warning or error
