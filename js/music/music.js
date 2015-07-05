@@ -11,16 +11,18 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'タイナカ彩智 - disillusion.mp3',
-		'川井宪次 - 冬の妖精.mp3',
-		'川井宪次 - 孤独な巡礼.mp3',
-		'川井宪次 - 今はその剣を置いて.mp3',
-		'川井宪次 - 骑士王の夸り.mp3',
-		'川井宪次 - 群雄疾走.mp3',
-		'川井宪次 - 鲜血の骑兵.mp3'
+		'Colbie Caillat - Try.mp3',
+		'The Weeknd - Earned It.mp3',
+		'Kadebostany - Crazy In Love.mp3',
+		'Ellie Goulding - Love Me Like You Do (From \'\'Fifty Shades of Grey\'\').mp3',
+		'Madeon,Ellie Goulding - Stay Awake.mp3',
+		'Twinbed - Trouble I\'m In.mp3',
+		'Avril Lavigne - Give You What You Like.mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
+	$('.audio_div').css("background","url(pic/play_logo.png) no-repeat center bottom");
+	$('.audio_div').css("background","url(pic/pause_logo.png) no-repeat center bottom");
 	load_song(0);
 	audio.addEventListener("canplaythrough", function () {
 	play();
