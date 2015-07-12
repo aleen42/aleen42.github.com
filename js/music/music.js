@@ -11,13 +11,13 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'Colbie Caillat - Try.mp3',
-		'The Weeknd - Earned It.mp3',
-		'Kadebostany - Crazy In Love.mp3',
-		'Ellie Goulding - Love Me Like You Do (From \'\'Fifty Shades of Grey\'\').mp3',
-		'Madeon,Ellie Goulding - Stay Awake.mp3',
-		'Twinbed - Trouble I\'m In.mp3',
-		'Avril Lavigne - Give You What You Like.mp3'
+		'rita-遥か彼方（little busters）.mp3',
+		'Sherry - .AdèSso E Fortuna～炎と永遠～.mp3',
+		'みとせのりこ - .盜めない寶石.mp3',
+		'井上喜久子 - .そらは語らない.mp3',
+		'勝木ゆかり(S.E.N.S) - .Moonlight.mp3',
+		'天门 - 想い出は遠くの日々.mp3',
+		'元ちとせ - .春のかたみ.mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
