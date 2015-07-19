@@ -11,13 +11,13 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'rita-遥か彼方（little busters）.mp3',
-		'Sherry-AdèSso E Fortuna～炎と永遠～.mp3',
-		'みとせのりこ-盜めない寶石.mp3',
-		'井上喜久子-そらは語らない.mp3',
-		'勝木ゆかり(S.E.N.S)-Moonlight.mp3',
-		'天门-想い出は遠くの日々.mp3',
-		'元ちとせ-春のかたみ.mp3'
+		'帝國歌劇団-花咲く乙女.mp3',
+		'冈崎律子-青空.mp3',
+		'栗林みな実-涙の理由.mp3',
+		'栗林みな実-微笑みの彼方.mp3',
+		'平原綾香-はじまりの風.mp3',
+		'澤野弘之-Blue Dragon.mp3',
+		'志方晶子-Amnesia.mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
