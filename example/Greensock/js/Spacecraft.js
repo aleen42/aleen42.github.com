@@ -8,7 +8,7 @@
 		yoyo: false
 	});
 	
-	t.timeScale(0.1);
+	t.timeScale(3);
 
 	
 	t.set([ellipse1, ellipse2, ellipse3], {
