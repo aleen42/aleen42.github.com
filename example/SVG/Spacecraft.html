@@ -57,10 +57,6 @@
 			padding: 10px 0;
 		}
 		
-		/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
-		.content ul, .content ol { 
-			padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
-		}
 		
 		/* ~~ 其它浮动/清除类 ~~ */
 		.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
@@ -99,6 +95,8 @@
 				font-size:20px;}
 			#code{
 				font-size:6px;}
+			#container{
+				top:50%;}
 		}
     </style>
 </head>
@@ -122,20 +120,21 @@
 		<ellipse id="ellipse3" stroke-linecap="round" transform="matrix(0.8659 -0.5002 0.5002 0.8659 -30.9404 122.5889)" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="213.165" cy="119" rx="88.167" ry="29.333"/>
 
 		</svg>
-        <div style="position:absolute;right:2%;bottom:3%;">
+        
+	</div>
+    <div style="position:absolute;right:2%;bottom:3%;">
         	<font id="name1">(Please read in Chrome)</font>&nbsp;&nbsp;<b id="name2" style="font-family:Arial;">Spacecraft</b>
         </div>
-        <div id="code" style="position:absolute;left:1%;bottom:1%;line-height:2px;">
-        	<p>origin is (380,140);</p>
-			<p>scale is (240,240/3);</p>
-			<p>rot is pi/2+0*pi/3;</p>
-			<p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
-			<p>rot is pi/2+2*pi/3;</p>
-			<p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
-			<p>rot is pi/2-2*pi/3;</p>
-			<p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
-        </div>
-	</div>
+    <div id="code" style="position:absolute;left:1%;bottom:1%;line-height:2px;">
+        <p>origin is (380,140);</p>
+        <p>scale is (240,240/3);</p>
+        <p>rot is pi/2+0*pi/3;</p>
+        <p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
+        <p>rot is pi/2+2*pi/3;</p>
+        <p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
+        <p>rot is pi/2-2*pi/3;</p>
+        <p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
+    </div>
     <font id="rights" style="font-family:Arial;color:#000;right:2%;bottom:1%;position:absolute;">Copyright © <b>Aleen</b>, PuiMan Cheui 2015. All rights reserved.</font>
     <script src="js/Spacecraft.js"></script>
 </body>
