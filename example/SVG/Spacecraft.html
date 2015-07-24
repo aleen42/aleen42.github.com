@@ -79,14 +79,24 @@
 		}
 		@media screen and (min-width: 45em)
 		{
-		.bg_orbit{
-			opacity:0.05;}
+			.bg_orbit{
+				opacity:0.05;}
+			#rights{
+				font-size:16px;}
+			#name{
+				position:absolute;right:2%;bottom:3%;}
 		}
 		
 		@media screen and (max-width: 45em)
 		{
-		.bg_orbit{
-			opacity:0.5;}
+			.bg_orbit{
+				opacity:0.5;}
+			#rights{
+				font-size:5px;}
+			#read{
+				opacity:0;}
+			#name{
+				margin:0 auto;}
 		}
     </style>
 </head>
@@ -110,8 +120,8 @@
 		<ellipse id="ellipse3" stroke-linecap="round" transform="matrix(0.8659 -0.5002 0.5002 0.8659 -30.9404 122.5889)" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="213.165" cy="119" rx="88.167" ry="29.333"/>
 
 		</svg>
-        <div style="position:absolute;right:2%;bottom:3%;">
-        	<font>(Please read in Chrome)</font>&nbsp;&nbsp;<b style="font-family:Arial;font-size:60px;">Spacecraft</b>
+        <div id="name">
+        	<font id="read">(Please read in Chrome)</font>&nbsp;&nbsp;<b style="font-family:Arial;font-size:60px;">Spacecraft</b>
         </div>
         <div style="position:absolute;left:2%;bottom:1%;line-height:2px;">
         	<p>origin is (380,140);</p>
@@ -124,7 +134,7 @@
 			<p>for t from -pi to pi step pi/50 draw (cos(t),sin(t));</p>
         </div>
 	</div>
-    <font style="font-size:16px;font-family:Arial;color:#000;right:2%;bottom:1%;position:absolute;">Copyright © <b>Aleen</b>, PuiMan Cheui 2015. All rights reserved.</font>
+    <font id="rights" style="font-family:Arial;color:#000;right:2%;bottom:1%;position:absolute;">Copyright © <b>Aleen</b>, PuiMan Cheui 2015. All rights reserved.</font>
     <script src="js/Spacecraft.js"></script>
 </body>
 </html>
