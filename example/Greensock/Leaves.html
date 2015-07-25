@@ -48,8 +48,6 @@
 		.container {
 			width: 100%;
 			height: 100%;
-			max-width: 1920px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
-			min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
 			background-color: #FFF;
 			margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
 		}
@@ -82,6 +80,24 @@
 			height:0;
 			font-size: 1px;
 			line-height: 0px;
+		}
+		
+		@media screen and (min-width: 45em)
+		{
+			#rights{
+				font-size:16px;}
+			#name2{
+				font-size:60px;}
+		}
+		
+		@media screen and (max-width: 45em)
+		{
+			#rights{
+				font-size:5px;}
+			#name1{
+				font-size:5px;}
+			#name2{
+				font-size:20px;}
 		}
 		
 		-->
@@ -259,11 +275,12 @@
 	c-0.04,0.26-0.052,0.651-0.016,0.904c0.195,1.36,1.079,2.195,1.621,3.229c0.357,0.073,0.664,0.424,0.679,0.831
 	C23.397,38.239,24.026,38.184,24.182,38.623z"/>
     		</svg>
-        <div style="position:absolute;right:20px;bottom:20px;">
-        	<font>(Please read in Chrome)</font>&nbsp;&nbsp;<b style="font-family:Arial;font-size:60px;">Leavs</b>
-        </div>
-        <font style="font-size:16px;font-family:Arial;color:#000;margin-top:0px;right:20px;bottom:10px;position:absolute;">Copyright © <b>Aleen</b>, PuiMan Cheui 2015. All rights reserved.</font>
+        
 	</div>
+    <div style="position:absolute;right:2%;bottom:3%;">
+        	<font id="name1">(Please read in Chrome)</font>&nbsp;&nbsp;<b id="name2" style="font-family:Arial;">Leaves</b>
+        </div>
+    <font id="rights" style="font-family:Arial;color:#000;right:2%;bottom:1%;position:absolute;">Copyright © <b>Aleen</b>, PuiMan Cheui 2015. All rights reserved.</font>
    <script src="js/near_Leaves.js"></script>
    <script src="js/middle_Leaves.js"></script>
    <script src="js/remote_Leaves.js"></script>
