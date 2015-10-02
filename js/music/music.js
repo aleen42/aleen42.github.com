@@ -11,13 +11,13 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'帝國歌劇団-花咲く乙女.mp3',
-		'冈崎律子-青空.mp3',
-		'栗林みな実-涙の理由.mp3',
-		'栗林みな実-微笑みの彼方.mp3',
-		'平原綾香-はじまりの風.mp3',
-		'澤野弘之-Blue Dragon.mp3',
-		'志方晶子-Amnesia.mp3'
+		'Axwell Λ Ingrosso - Sun Is Shining.mp3',
+		'China Crisis - Good Again.mp3',
+		'Demi Lovato - Heart Attack.mp3',
+		'Koven - Get This Right.mp3',
+		'Miley Cyrus - Dooo it!.mp3',
+		'Rootkit - Against the Sun (feat. Anna Yvette).mp3',
+		'Sage the Gemini,Nick Jonas - Good Thing (feat. Nick Jonas).mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
