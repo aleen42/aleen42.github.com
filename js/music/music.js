@@ -12,7 +12,7 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	list=
 	[
 		'Axwell Λ Ingrosso - Sun Is Shining.mp3',
-		'China Crisis - Good Again.mp3',
+		'Adam Lambert - Ghost Town.mp3',
 		'Demi Lovato - Heart Attack.mp3',
 		'Koven - Get This Right.mp3',
 		'Miley Cyrus - Dooo it!.mp3',
