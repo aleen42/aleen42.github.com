@@ -4,7 +4,6 @@
     <meta property="wb:webmaster" content="5f7f26ff9b2e6186" />
     <title>Aleen42</title>
     <!--<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=0.2,user-scalable=yes,target-densitydpi=device-dpi">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="pic/icon.ico" />
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
