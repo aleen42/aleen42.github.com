@@ -9,22 +9,30 @@
 var share = {};
 
 var options = {
-	tencent: {
-		url: 'url',
-		title: 'title',
-		desc: 'desc',
-		summary: 'summary',
-		site: 'site',
-		image: 'pics'
-	},
-	tieba: {
-		url: 'url',
-		title: 'title',
-		desc: 'desc',
-		summary: 'summary',
-		site: 'site',
-		image: 'pic'
-	}
+    tencent: {
+        url: 'url',
+        title: 'title',
+        desc: 'desc',
+        summary: 'summary',
+        site: 'site',
+        image: 'pics'
+    },
+    tieba: {
+        url: 'url',
+        title: 'title',
+        desc: 'desc',
+        summary: 'summary',
+        site: 'site',
+        image: 'pic'
+    },
+    tencentweibo: {
+        url: 'url',
+        title: 'title',
+        desc: 'desc',
+        summary: 'summary',
+        site: 'site',
+        image: 'pic'
+    }
 };
 
 /**
@@ -35,6 +43,7 @@ var options = {
  * @return {[type]}        [description]
  */
 var initWindow = function(url, width, height) {
+    "use strict";
     var iWidth = width; //弹出窗口的宽度;
     var iHeight = height; //弹出窗口的高度;
     //获得窗口的垂直位置
@@ -53,17 +62,17 @@ var initWindow = function(url, width, height) {
  * @param {[type]} url   [set the url of the share]
  */
 var setOption = function(option, title, image, site, url) {
-	"use strict";
-	site = site || 'Voice In';
-	url = url || location.href;
-	
-	var p = {};
-	p[option.url] = url;
-	p[option.desc] = '';
-	p[option.summary] = '';
-	p[option.title] = title;
-	p[option.site] = site;
-	p[option.image] = image;
+    "use strict";
+    site = site || 'Voice In';
+    url = url || location.href;
+
+    var p = {};
+    p[option.url] = url;
+    p[option.desc] = '';
+    p[option.summary] = '';
+    p[option.title] = title;
+    p[option.site] = site;
+    p[option.image] = image;
 
     var s = [];
     for (var i in p) {
@@ -159,5 +168,20 @@ share.initTieba = function(object, title, image) {
     "use strict";
     object.click(function() {
         initWindow('http://tieba.baidu.com/f/commit/share/openShareApi?' + setOption(options.tieba, title, image), 730, 588);
+    });
+}
+
+/**
+ * [initWeibo: for sina weibo]
+ * @param  {[type]} appkey [the app key from sina open api(http://open.weibo.com/)]
+ * @param  {[type]} object [the object which you want to bind to]
+ * @param  {[type]} title  [set the title of the share]
+ * @param  {[type]} image  [set the image of the share]
+ * @return {[type]}        [description]
+ */
+share.initTencentWeibo = function(appkey, object, title, image) {
+    "use strict";
+    object.click(function() {
+        initWindow('http://v.t.qq.com/share/share.php?' + 'appkey=' + appkey + '&' + setOption(options.tencentweibo, title, image), 730, 588);
     });
 }
