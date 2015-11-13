@@ -9,4 +9,5 @@ init.initShare = function () {
 	share.initTencent('qq', $('#share-qq'), title, image);
 	share.initWeibo('', $('#share-weibo'), title, image);
 	share.initTieba($('#share-tieba'), title, image); 
+	share.initTencentWeibo('a06ccba7fb7f156a914a2479c6ad30ae', $('#share-tencentweibo'), title, image);
 }
