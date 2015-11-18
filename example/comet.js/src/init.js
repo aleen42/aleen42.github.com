@@ -22,6 +22,7 @@ $(document).ready(function () {
 		/**
 		 * Run the comet
 		 */
+		alert('Start to listen');
 		comet.run();
 	});
 	
