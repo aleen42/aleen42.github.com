@@ -68,6 +68,7 @@ var comet = {
     _refresh: function () {
         "use strict";
         comet._timeout = setTimeout(function () {
+			console.log('refresh to run');
             comet.run()
         }, comet.sleepTime);
     },
@@ -119,6 +120,6 @@ var comet = {
      * @return {[type]} [description]
      */
     publish: function() {
-        commet.callback();
+        comet.callback();
     }
 };
