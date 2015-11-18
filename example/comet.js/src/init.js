@@ -4,7 +4,7 @@ $(document).ready(function () {
 	/**
 	 * Init comet
 	 */
-	comet.init('http://video.soundtooth.cn/play/scanQR');
+	comet.init('post.php');
 	
 	var postData = {
 		data: 'value'	
@@ -19,7 +19,6 @@ $(document).ready(function () {
 	
 	$('#listen').click(function (){
 		"use strict";
-		alert('Listen has run');
 		/**
 		 * Run the comet
 		 */
