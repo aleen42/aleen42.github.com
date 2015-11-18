@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample of comet.js</title>
+</head>
+<body>
+	<a href="javascript:void(0)" id="listen">Listen to return</a>
+	<a href="javascript:void(0)" id="publish">Return</a>
+	<script type="text/javascript" src="./src/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="./src/comet.min.js"></script>
+	<script type="text/javascript" src="./src/init.js"></script>
+</body>
+</html>
