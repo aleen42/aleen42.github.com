@@ -4,7 +4,7 @@ $(document).ready(function () {
 	/**
 	 * Init comet
 	 */
-	comet.init('post.php');
+	comet.init('http://video.soundtooth.cn/play/testComet');
 	
 	var postData = {
 		data: 'value'	
