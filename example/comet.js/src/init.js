@@ -16,11 +16,7 @@ init.initComet = function () {
 	 * Set the post data and call back function
 	 */
 	comet.subscribe(postData, function(data) {
-		$('#status').html('Return');
-		$('#status').addClass('notify');
-		setTimeout(function() {
-			$('#status').removeClass('notify');
-		}, 1000);
+		console.log('return');
 	});
 	
 	$('#listen').click(function (){

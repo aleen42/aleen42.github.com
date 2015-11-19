@@ -128,7 +128,6 @@ var comet = {
 	                    break;
 	            }
 			} else {
-				comet.callback(data);
 				comet._published = false;
 			}
         });
