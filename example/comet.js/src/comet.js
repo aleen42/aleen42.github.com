@@ -128,7 +128,7 @@ var comet = {
 	                    break;
 	            }
 			} else {
-				$('#status').html('Start');
+				$('#status').html('Return');
 				clearTimeout(comet._timeout);
 				comet._published = false;
 			}
