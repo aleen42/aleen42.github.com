@@ -1,5 +1,7 @@
 "use strict";
-$(document).ready(function () {
+var init = {};
+
+init.initComet = function () {
 	"use strict";
 	/**
 	 * Init comet
@@ -33,4 +35,4 @@ $(document).ready(function () {
 		 */
 		comet.publish();
 	});
-});
+};
