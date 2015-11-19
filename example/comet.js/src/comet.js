@@ -79,7 +79,7 @@ var comet = {
 				$('#status').removeClass('notify');
 				$('#status').addClass('show');
 			}, 1000);
-            comet.run()
+            comet.run();
         }, comet.sleepTime);
     },
 
