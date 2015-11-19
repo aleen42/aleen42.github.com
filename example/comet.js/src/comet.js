@@ -103,6 +103,12 @@ var comet = {
      */
     run: function () {
         "use strict";
+		$('#status').addClass('notify');
+		setTimeout(function() {
+			$('#status').html('Listen');
+			$('#status').removeClass('notify');
+			$('#status').addClass('show');
+		}, 1000);
         $.getJSON(comet._baseurl, comet._subscribed, function (data) {
 			if (!comet._published) {
 				switch (data.success) {
