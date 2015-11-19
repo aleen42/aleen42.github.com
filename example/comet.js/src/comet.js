@@ -104,7 +104,7 @@ var comet = {
     run: function () {
         "use strict";
         $.getJSON(comet._baseurl, comet._subscribed, function (data) {
-			if (!_published) {
+			if (!comet._published) {
 				switch (data.success) {
 	                case 'false':
 	                    /**
