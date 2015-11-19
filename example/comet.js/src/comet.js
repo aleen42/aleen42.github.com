@@ -107,6 +107,7 @@ var comet = {
      */
     run: function () {
         "use strict";
+		$('#status').html('Start');
 		$('#status').addClass('notify');
 		setTimeout(function() {
 			$('#status').removeClass('notify');
