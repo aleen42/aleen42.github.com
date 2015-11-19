@@ -1,0 +1,69 @@
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: Arial;
+}
+
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.container .header-title,
+.header-subtitle {
+    text-align: left;
+    margin-left: 100px;
+}
+
+.container .header-title {
+    font-size: 100px;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.container .header-subtitle {
+    font-size: 20px;
+    color: #fff;
+    margin-top: -20px;
+    margin-bottom: 150px;
+}
+
+.container img {
+    width: 36px;
+    height: 36px;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    opacity: 0.7;
+}
+
+.container img:hover {
+    opacity: 1;
+}
+
+input[type = "button"] {
+	width: 100px;
+	height: 50px;
+	background-color: #E86C4F;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	margin: 0 50px;
+	outline: none;
+}
+
+input[type = "button"]:active {
+	transform: scale(0.9, 0.9);
+	-webkit-transform: scale(0.9, 0.9);
+	-o-transform: scale(0.9, 0.9);
+	-moz-transform: scale(0.9, 0.9);
+	-ms-transform: scale(0.9, 0.9);
+}
