@@ -88,11 +88,11 @@ input[type = "button"]:active {
 }
 
 .container #status.show {
-	-webkit-animation:1000ms show-scale infinite;
-	-moz-animation:1000ms show-scale infinite;
-	-ms-animation:1000ms show-scale infinite;
-	-o-animation:1000ms show-scale infinite;
-	animation:1000ms show-scale infinite;	
+	-webkit-animation:1000ms show-scale;
+	-moz-animation:1000ms show-scale;
+	-ms-animation:1000ms show-scale;
+	-o-animation:1000ms show-scale;
+	animation:1000ms show-scale;	
 }
 
 /**
