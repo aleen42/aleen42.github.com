@@ -17,8 +17,10 @@ init.initComet = function () {
 	 */
 	comet.subscribe(postData, function(data) {
 		$('#status').html('Return');
-		$('#status').removeClass('show');
 		$('#status').addClass('notify');
+		setTimeout(function() {
+			$('#status').removeClass('notify');
+		}, 1000);
 	});
 	
 	$('#listen').click(function (){
