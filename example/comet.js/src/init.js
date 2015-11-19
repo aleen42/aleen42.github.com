@@ -16,15 +16,21 @@ init.initComet = function () {
 	 * Set the post data and call back function
 	 */
 	comet.subscribe(postData, function(data) {
-		alert('Return result');
+		$('#status').html('Return');
+		$('#status').removeClass('show');
+		$('#status').addClass('notify');
 	});
+	
+	/**
+	 * initialize
+	 */
+	$('#status').css('opacity', '0');
 	
 	$('#listen').click(function (){
 		"use strict";
 		/**
 		 * Run the comet
 		 */
-		alert('Start to listen');
 		comet.run();
 	});
 	
