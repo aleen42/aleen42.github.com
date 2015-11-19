@@ -21,11 +21,6 @@ init.initComet = function () {
 		$('#status').addClass('notify');
 	});
 	
-	/**
-	 * initialize
-	 */
-	$('#status').css('opacity', '0');
-	
 	$('#listen').click(function (){
 		"use strict";
 		/**

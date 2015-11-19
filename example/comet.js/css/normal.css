@@ -75,6 +75,10 @@ input[type = "button"]:active {
 	-ms-transform: scale(0.9, 0.9);
 }
 
+.container #status {
+	opacity: 0;
+}
+
 .container #status.notify {
 	-webkit-animation:1000ms notify-scale;
 	-moz-animation:1000ms notify-scale;
