@@ -45,6 +45,12 @@ var comet = {
      * @type {Number}
      */
     _count: 1,
+	
+	/**
+     * [_published: point out if it's published]
+     * @type {Number}
+     */
+	_published: false,
 
     /**
      * [subscribe: a method to storing post data and callback function]
@@ -98,20 +104,24 @@ var comet = {
     run: function () {
         "use strict";
         $.getJSON(comet._baseurl, comet._subscribed, function (data) {
-            switch (data.success) {
-                case 'false':
-                    /**
-                     * refresh when ajax return false, which you do not want
-                     */
-                    comet._refresh();
-                    break;
-                case 'true':
-                    /**
-                     * trigger callback function when ajax return true
-                     */
-                    comet.callback(data);
-                    break;
-            }
+			if (!_published) {
+				switch (data.success) {
+	                case 'false':
+	                    /**
+	                     * refresh when ajax return false, which you do not want
+	                     */
+	                    comet._refresh();
+	                    break;
+	                case 'true':
+	                    /**
+	                     * trigger callback function when ajax return true
+	                     */
+	                    comet.callback(data);
+	                    break;
+	            }
+			} else {
+				comet.callback(data);
+			}
         });
     },
 
@@ -120,6 +130,6 @@ var comet = {
      * @return {[type]} [description]
      */
     publish: function() {
-        comet.callback();
+        comet._published = true;
     }
 };
