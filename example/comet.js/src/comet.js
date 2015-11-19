@@ -107,7 +107,6 @@ var comet = {
      */
     run: function () {
         "use strict";
-		$('#status').html('Start');
 		$('#status').addClass('notify');
 		setTimeout(function() {
 			$('#status').removeClass('notify');
@@ -129,6 +128,7 @@ var comet = {
 	                    break;
 	            }
 			} else {
+				$('#status').html('Start');
 				comet._published = false;
 			}
         });
