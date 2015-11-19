@@ -129,6 +129,7 @@ var comet = {
 	            }
 			} else {
 				$('#status').html('Start');
+				clearTimeout(comet._timeout);
 				comet._published = false;
 			}
         });
