@@ -97,28 +97,28 @@ input[type = "button"]:active {
 @keyframes notify-scale
 {
 0%   {transform: scale(1, 1); opacity: 0; color: #E86C4F;}
-40%  {transform: scale(2, 2); opacity: 1; color: #E86C4F;}
+40%  {transform: scale(1.1, 1.1); opacity: 1; color: #E86C4F;}
 100% {transform: scale(1, 1); opacity: 0; color: #E86C4F;}
 }
 
 @-moz-keyframes notify-scale /* Firefox */
 {
 0%   {-moz-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
-40%  {-moz-transform: scale(2, 2); opacity: 1; color: #E86C4F;}
+40%  {-moz-transform: scale(1.1, 1.1); opacity: 1; color: #E86C4F;}
 100% {-moz-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
 }
 
 @-webkit-keyframes notify-scale /* Safari and Chrome */
 {
 0%   {-webkit-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
-40%  {-webkit-transform: scale(2, 2); opacity: 1; color: #E86C4F;}
+40%  {-webkit-transform: scale(1.1, 1.1); opacity: 1; color: #E86C4F;}
 100% {-webkit-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
 }
 
 @-o-keyframes notify-scale /* Opera */
 {
 0%   {-o-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
-40%  {-o-transform: scale(2, 2); opacity: 1; color: #E86C4F;}
+40%  {-o-transform: scale(1.1, 1.1); opacity: 1; color: #E86C4F;}
 100% {-o-transform: scale(1, 1); opacity: 0; color: #E86C4F;}
 }
 
@@ -128,27 +128,27 @@ input[type = "button"]:active {
 @keyframes show-scale
 {
 0%   {transform: scale(1, 1); opacity: 0; color: #fff;}
-40%  {transform: scale(1.2, 1.2); opacity: 1; color: #fff;}
+40%  {transform: scale(1.05, 1.05); opacity: 1; color: #fff;}
 100% {transform: scale(1, 1); opacity: 0; color: #fff;}
 }
 
 @-moz-keyframes show-scale /* Firefox */
 {
 0%   {-moz-transform: scale(1, 1); opacity: 0; color: #fff;}
-40%  {-moz-transform: scale(1.2, 1.2); opacity: 1; color: #fff;}
+40%  {-moz-transform: scale(1.05, 1.05); opacity: 1; color: #fff;}
 100% {-moz-transform: scale(1, 1); opacity: 0;  color: #fff;}
 }
 
 @-webkit-keyframes show-scale /* Safari and Chrome */
 {
 0%   {-webkit-transform: scale(1, 1); opacity: 0;  color: #fff;}
-40%  {-webkit-transform: scale(1.2, 1.2); opacity: 1;  color: #fff;}
+40%  {-webkit-transform: scale(1.05, 1.05); opacity: 1;  color: #fff;}
 100% {-webkit-transform: scale(1, 1); opacity: 0;  color: #fff;}
 }
 
 @-o-keyframes show-scale /* Opera */
 {
 0%   {-o-transform: scale(1, 1); opacity: 0;  color: #fff;}
-40%  {-o-transform: scale(1.2, 1.2); opacity: 1;  color: #fff;}
+40%  {-o-transform: scale(1.05, 1.05); opacity: 1;  color: #fff;}
 100% {-o-transform: scale(1, 1); opacity: 0;  color: #fff;}
 }
