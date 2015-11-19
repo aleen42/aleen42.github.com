@@ -74,11 +74,9 @@ var comet = {
     _refresh: function () {
         "use strict";
         comet._timeout = setTimeout(function () {
-			setTimeout(function() {
-				$('#status').html('Listen');
-				$('#status').removeClass('notify');
-				$('#status').addClass('show');
-			}, 1000);
+			$('#status').html('Listen');
+			$('#status').removeClass('notify');
+			$('#status').addClass('show');
             comet.run();
         }, comet.sleepTime);
     },
