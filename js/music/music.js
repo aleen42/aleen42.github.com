@@ -11,13 +11,13 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	s = fc.item().name;*/
 	list=
 	[
-		'Axwell Λ Ingrosso - Sun Is Shining.mp3',
-		'Adam Lambert - Ghost Town.mp3',
-		'Demi Lovato - Heart Attack.mp3',
-		'Koven - Get This Right.mp3',
-		'Miley Cyrus - Dooo it!.mp3',
-		'Rootkit - Against the Sun (feat. Anna Yvette).mp3',
-		'Sage the Gemini,Nick Jonas - Good Thing (feat. Nick Jonas).mp3'
+		'群星 - いつか気付くかな.mp3',
+		'群星 - お砂糖ふたつ.mp3',
+		'群星 - ともしび.mp3',
+		'群星 - 少年たちとの別れ.mp3',
+		'群星 - 幻日.mp3',
+		'群星 - 降り続く雨の街で.mp3',
+		'群星 - 恋心を奏でる綺想曲.mp3'
 	]
 	
 	var num = Math.floor(Math.random()*list.length);
