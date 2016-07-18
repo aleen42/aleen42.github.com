@@ -13,7 +13,10 @@ html {
 .box__container {
 	overflow: auto;
 	position: relative;
-    scroll-behavior: smooth;
+    opacity: 0;
+	-webkit-transition: opacity 0.8s;
+	-o-transition: opacity 0.8s;
+	transition: opacity 0.8s;
 }
 
 
@@ -74,5 +77,7 @@ html {
 	background-image: url(./../images/head.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover
+	background-size: cover;
+
+	z-index: 99;
 }
