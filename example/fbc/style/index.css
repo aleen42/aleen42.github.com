@@ -1,0 +1,78 @@
+html {
+    /** based on the width of iPhone 6: 375px */
+    font-size: 100px;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/** container */
+.box__container {
+	overflow: auto;
+	position: relative;
+    scroll-behavior: smooth;
+}
+
+
+.box__container::-webkit-scrollbar {
+	display: none;
+}
+
+.box__container::-webkit-scrollbar-button {
+	display: none;
+}
+
+.box__container::-webkit-scrollbar-track {
+    /** Part 3 */
+}
+
+.box__container::-webkit-scrollbar-track-piece {
+    /** Part 4 */
+}
+
+.box__container::-webkit-scrollbar-thumb {
+    /** Part 5 */
+}
+
+.box__container::-webkit-scrollbar-corner {
+    /** Part 6 */
+}
+
+.box__container::-webkit-resizer {
+    /** Part 7 */
+}
+
+.box__background {
+	background-repeat: no-repeat;
+	background-position: center;
+	/*background-image: url(./../images/bg.jpg);
+	width: 1366px;
+	height: 768px;*/
+
+	position: relative;
+	background-image: url(./../images/bg2.jpg);
+	width: 1240px;
+	height: 690px;
+}
+
+.interact__item {
+	position: fixed;
+}
+
+.interact__profile {
+	top: 0.2rem;
+	left: 0.2rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 50%;
+
+	background-image: url(./../images/head.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover
+}
