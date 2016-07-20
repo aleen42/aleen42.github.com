@@ -4,8 +4,9 @@ document.getElementById('load').style.opacity = 1;
 
 const text = [
      'the Game',
-     'the Forbidden City',
-     'Walking Up'
+     'Digging Treasures',
+     'Walking Up',
+     'the Forbidden City'
 ];
 
 var textOptions = {
@@ -15,7 +16,7 @@ var textOptions = {
      backInterval: null,
      typeSpeed: 100,
      typeBackSpeed: 25,
-     typeDelay: 2000
+     typeDelay: 1500
 };
 
 setInterval(function () {
