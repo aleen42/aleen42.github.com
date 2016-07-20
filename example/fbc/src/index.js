@@ -189,11 +189,9 @@ function run() {
 		loadPoints(document.getElementById('map'), points);
 		setBackgroundRatio(document.getElementById('map'));
 		
+		document.getElementById('view').style.opacity = 1;
 		showPosition(0.5, 0.5, document.getElementById('map'), document.getElementById('view'));
 		
-		setTimeout(function () {
-			document.getElementById('view').style.opacity = 1;
-		}, 500);
 
 		// var index = 0;
 
