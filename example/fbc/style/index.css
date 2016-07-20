@@ -1,6 +1,7 @@
 html {
     /** based on the width of iPhone 6: 375px */
     font-size: 100px;
+    font-family: "Arial";
 }
 
 

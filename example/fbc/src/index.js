@@ -22,6 +22,21 @@ function run() {
 			{ x: 371, y: 370 }
 		];
 
+		const lines = [
+			[-1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+			[-1, -1,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+			[-1, -1, -1,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+			[-1, -1, -1, -1,  0,  0,  0,  0,  0,  0,  0,  0],
+			[-1, -1, -1, -1, -1,  0,  0,  0,  0,  0,  0,  0],
+			[-1, -1, -1, -1, -1, -1,  0,  0,  0,  0,  0,  0],
+			[-1, -1, -1, -1, -1, -1, -1,  0,  0,  0,  0,  0],
+			[-1, -1, -1, -1, -1, -1, -1, -1,  0,  0,  0,  0],
+			[-1, -1, -1, -1, -1, -1, -1, -1, -1,  0,  0,  0],
+			[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0,  0],
+			[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,  0],
+			[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+		];
+
 		/**
 		 * [convertPxToInt: extract int value from a px value]
 		 * @param  {[type]} px [the px string value]
@@ -67,7 +82,7 @@ function run() {
 		 * @return {[type]}          [description]
 		 */
 		function showPosition(xp, yp, map, viewPort) {
-			const speedTime = 20;
+			const speedTime = 50;
 
 			var offsetLeft;
 			var offsetTop;
@@ -174,9 +189,12 @@ function run() {
 		setBackgroundRatio(document.getElementById('map'));
 		
 		showPosition(0.5, 0.5, document.getElementById('map'), document.getElementById('view'));
-		document.getElementById('view').style.opacity = 1;
+		
+		setTimeout(function () {
+			document.getElementById('view').style.opacity = 1;
+		}, 500);
 
-		var index = 0;
+		// var index = 0;
 
 		// setInterval(function () {
 		// 	showPosition(points[index].x / 1240, points[index].y / 690, document.getElementById('map'), document.getElementById('view'));
