@@ -54,7 +54,7 @@
 .cursor__text::before {
     font-size: 0.14rem;
     font-weight: normal;
-    content: "Having Fun with ";
+    content: "Having fun with ";
 }
 
 .cursor {
