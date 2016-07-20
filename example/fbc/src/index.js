@@ -3,7 +3,7 @@ const screenWidth = window.screen.availWidth;
 const screenHeight = window.navigator.userAgent.toLowerCase().indexOf('micromessenger') > -1 ? window.screen.availHeight - wechatTopBarHeight : window.screen.availHeight;
 
 function run() {
-	document.getElementById('load').style.opacity = 0;
+	document.querySelectorAll('div.load__area')[0].style.opacity = 0;
 
 	setTimeout(function() {
 		const points = [
@@ -182,8 +182,9 @@ function run() {
 		 *
 		 * 
 		 */
-
+		document.querySelectorAll('div.load__area')[0].style.display = 'none';
 		document.getElementById('load').style.display = 'none';
+		document.getElementById('view').style.display = 'block';
 		hideScrollBar(document.getElementById('view'));
 		loadPoints(document.getElementById('map'), points);
 		setBackgroundRatio(document.getElementById('map'));

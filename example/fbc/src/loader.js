@@ -1,10 +1,11 @@
-document.getElementById('load').style['margin-top'] = screenHeight / 2 - 35 + 'px';
+document.querySelectorAll('div.start__btn')[0].style.top = screenHeight / 2 - 35 + 'px';
+document.getElementById('load').style.top = screenHeight / 2 - 35 + 'px';
 document.getElementById('load').style.opacity = 1;
 
 const text = [
      'the Game',
      'the Forbidden City',
-     'Running'
+     'Walking Up'
 ];
 
 var textOptions = {
@@ -58,7 +59,15 @@ setInterval(function () {
           onProgress : function(current, total){
           },
           onComplete : function(total){
-               // run();
+               document.getElementById('load').style.opacity = 0;
+
+               document.querySelectorAll('div.start__btn')[0].addEventListener('click', function () {
+                    run();
+               });
+
+               setTimeout(function () {
+                    document.querySelectorAll('div.start__btn')[0].style.opacity = 1;
+               }, 800);
           }
      });
 
