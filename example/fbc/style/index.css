@@ -15,9 +15,7 @@ html {
 	overflow: auto;
 	position: relative;
     opacity: 0;
-	-webkit-transition: opacity 0.8s;
-	-o-transition: opacity 0.8s;
-	transition: opacity 0.8s;
+	display: none;
 }
 
 
