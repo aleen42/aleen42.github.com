@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+    font-family: Arial;
+}
+
+body {
+	background-color: #a10000;
+}
+
+.container {
+	width: 100%;
+	text-align: center;
+	padding-top: 10%;
+}
+
+.box {
+	text-align: left;
+	width: 100%;
+    margin-bottom: 10px;
+}
+
+.name {
+	font-size: 18px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 20%;
+	color: rgba(0, 0, 0, 0.2);
+
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.value {
+	font-size: 14px;
+	text-indent: 2em;
+	margin-top: 10px;
+
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
