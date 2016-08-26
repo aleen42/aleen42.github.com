@@ -1,0 +1,59 @@
+/*******************************************************
+ *
+ *
+ * Component Loading
+ *
+ * 
+ */
+
+.playingicon {
+    display: none;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.playingicon > div {
+    height: 100%;
+    width: 3px;
+    margin: 0 0.5px;
+    display: inline-block;
+
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    transform-origin: bottom;
+
+    -webkit-animation: stretchdelay 1.0s infinite ease-in-out;
+    animation: stretchdelay 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes stretchdelay {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
