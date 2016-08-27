@@ -32857,7 +32857,7 @@
 
 	module.exports = {
 		"data": [
-			"./assets/songs//Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3"
+			"http://share.soundtooth.cn/Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3"
 		]
 	};
 
