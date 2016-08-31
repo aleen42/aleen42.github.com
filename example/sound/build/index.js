@@ -32412,7 +32412,7 @@
 	                                                                                                                                                                                                     *
 	                                                                                                                                                                                                     **********************************************************************/
 	
-	var debugMode = false;
+	var debugMode = true;
 	/** overidden console.log */
 	if (!debugMode) {
 		console = {
@@ -32512,6 +32512,8 @@
 			// 	clearInterval(this.startTrackings[curretTrackingThreadIndex]);	/** clear tracking time interval object for playingEvent				*/
 			// 	this.startTrackings[curretTrackingThreadIndex] = null;
 			// }.bind(this), 500);
+	
+			this.startTime = new Date();
 		}.bind(this);
 	
 		/** initialize context object */
