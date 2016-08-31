@@ -32795,7 +32795,7 @@
 		var returnData = [];
 	
 		/** filter frequency data */
-		var periods = [[0.1, 0.3], [0.4, 0.6], [0.7, 0.9]];
+		var periods = [[0.1, 0.2], [0.3, 0.4], [0.6, 0.7], [0.8, 0.9]];
 	
 		for (var period = 0; period < periods.length; period++) {
 			for (var i = parseInt(periods[period][0] * dataArray.length); i < parseInt(periods[period][1] * dataArray.length); i += 1) {
