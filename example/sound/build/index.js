@@ -30163,7 +30163,7 @@
 				var data = this.props.sound.getOscilloscopeData(this.props.px / 2);
 
 				/** @type {Number} [define the space between two oscilloscope, left and the right one] */
-				var space = 7;
+				var space = 5;
 
 				var fillColor = 'rgba(0, 0, 0, 0.2)';
 
@@ -30235,7 +30235,7 @@
 	}(_react2.default.Component);
 
 	Oscilloscope.defaultProps = {
-		px: parseInt(Math.pow(2, 8))
+		px: parseInt(Math.pow(2, 9))
 	};
 
 /***/ },
@@ -30879,7 +30879,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var debugMode = false;
+	var debugMode = true;
 	/** overidden console.log */
 	/***********************************************************************
 	 *                                                                   _

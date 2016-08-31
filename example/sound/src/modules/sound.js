@@ -24,7 +24,7 @@ import Common from './common';
 import BufferLoader from './bufferLoader';
 import _ from 'underscore';
 
-const debugMode = false;
+const debugMode = true;
 /** overidden console.log */
 if (!debugMode) {
 	console = {
