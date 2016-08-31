@@ -69,7 +69,7 @@
 	
 	var _sound2 = _interopRequireDefault(_sound);
 	
-	var _songlist = __webpack_require__(/*! ./../assets/songlist.json */ 495);
+	var _songlist = __webpack_require__(/*! ./../assets/songlist.json */ 492);
 	
 	var _songlist2 = _interopRequireDefault(_songlist);
 	
@@ -31591,7 +31591,7 @@
 		_createClass(Oscilloscope, [{
 			key: 'getOscilloscope',
 			value: function getOscilloscope() {
-				var data = this.props.sound.getOscilloscopeData(this.props.px / 2);
+				var data = this.props.sound.getOscilloscopeData(this.props.px);
 	
 				/** @type {Number} [define the space between two oscilloscope, left and the right one] */
 				var space = 5;
@@ -31604,15 +31604,15 @@
 					return _react2.default.createElement(
 						'g',
 						{ key: index },
-						_react2.default.createElement('rect', { key: -index - 1, ref: 'oscilloscope__left-tag' + index, x: 50 - space - index / data.length * (50 - space) + '%', y: (this.props.height - elem.value) / 2 + 'px', width: 1, height: 100 + 'px', fill: fillColor }),
-						_react2.default.createElement('rect', { key: index + 1, ref: 'oscilloscope__right-tag' + index, x: 50 + space + index / data.length * (100 - (50 + space)) + '%', y: (this.props.height - elem.value) / 2 + 'px', width: 1, height: 100 + 'px', fill: fillColor })
+						_react2.default.createElement('rect', { key: -index - 1, ref: 'oscilloscope__left-tag' + index, x: 50 - space - index / data.length * (50 - space) + '%', y: (this.props.height - elem.value) / 2 + 'px', width: 1, height: elem.value + 'px', fill: fillColor }),
+						_react2.default.createElement('rect', { key: index + 1, ref: 'oscilloscope__right-tag' + index, x: 50 + space + index / data.length * (100 - (50 + space)) + '%', y: (this.props.height - elem.value) / 2 + 'px', width: 1, height: elem.value + 'px', fill: fillColor })
 					);
 				}.bind(this));
 			}
 		}, {
 			key: 'clearOscilloscope',
 			value: function clearOscilloscope() {
-				for (var i = 0; i < this.props.px / 4; i++) {
+				for (var i = 0; i < this.dataLength; i++) {
 					if (typeof this.refs['oscilloscope__left-tag' + i] !== 'undefined') {
 						this.refs['oscilloscope__left-tag' + i].setAttribute('height', 0 + 'px');
 						this.refs['oscilloscope__left-tag' + i].setAttribute('y', this.props.height / 2 + 'px');
@@ -31627,24 +31627,28 @@
 		}, {
 			key: 'updateOscilloscope',
 			value: function updateOscilloscope() {
-				this.clearOscilloscope();
+				var _this2 = this;
 	
-				var data = this.props.sound.getOscilloscopeData(this.props.px / 2);
+				var data = this.props.sound.getOscilloscopeData(this.props.px);
+	
+				var _loop = function _loop(i) {
+					if (data[i].value === 0) {
+						return 'continue';
+					}
+	
+					var setSide = function (side) {
+						this.refs['oscilloscope__' + side + '-tag' + i].setAttribute('height', data[i].value + 'px');
+						this.refs['oscilloscope__' + side + '-tag' + i].setAttribute('y', (this.props.height - data[i].value) / 2 + 'px');
+					}.bind(_this2);
+	
+					setSide('left');
+					setSide('right');
+				};
 	
 				for (var i = 0; i < this.dataLength; i++) {
-					if (data[i].value === 0) {
-						continue;
-					}
+					var _ret = _loop(i);
 	
-					if (typeof this.refs['oscilloscope__left-tag' + i] !== 'undefined') {
-						this.refs['oscilloscope__left-tag' + i].setAttribute('height', data[i].value * this.props.height + 'px');
-						this.refs['oscilloscope__left-tag' + i].setAttribute('y', (this.props.height - data[i].value * this.props.height) / 2 + 'px');
-					}
-	
-					if (typeof this.refs['oscilloscope__right-tag' + i] !== 'undefined') {
-						this.refs['oscilloscope__right-tag' + i].setAttribute('height', data[i].value * this.props.height + 'px');
-						this.refs['oscilloscope__right-tag' + i].setAttribute('y', (this.props.height - data[i].value * this.props.height) / 2 + 'px');
-					}
+					if (_ret === 'continue') continue;
 				}
 			}
 		}, {
@@ -31666,7 +31670,7 @@
 	}(_react2.default.Component);
 	
 	Oscilloscope.defaultProps = {
-		px: parseInt(Math.pow(2, 9))
+		px: parseInt(Math.pow(2, 7))
 	};
 
 /***/ },
@@ -31710,7 +31714,7 @@
 	
 	
 	// module
-	exports.push([module.id, "/*******************************************************\n *\n *\n * Component Oscilloscope\n *\n * \n */\n\n.oscilloscope__container {\n\tposition: absolute;\n    top: 0;\n    left: 50%;\n    padding: 20px;\n    box-sizing: border-box;\n    /*background-color: rgba(0, 0, 0, 0.7);*/\n    z-index: 999;\n    border-radius: 10px;\n}\n", "", {"version":3,"sources":["/./src/components/player/oscilloscope/oscilloscope.css"],"names":[],"mappings":"AAAA;;;;;;GAMG;;AAEH;CACC,mBAAmB;IAChB,OAAO;IACP,UAAU;IACV,cAAc;IACd,uBAAuB;IACvB,yCAAyC;IACzC,aAAa;IACb,oBAAoB;CACvB","file":"oscilloscope.css","sourcesContent":["/*******************************************************\n *\n *\n * Component Oscilloscope\n *\n * \n */\n\n.oscilloscope__container {\n\tposition: absolute;\n    top: 0;\n    left: 50%;\n    padding: 20px;\n    box-sizing: border-box;\n    /*background-color: rgba(0, 0, 0, 0.7);*/\n    z-index: 999;\n    border-radius: 10px;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "/*******************************************************\n *\n *\n * Component Oscilloscope\n *\n * \n */\n\n.oscilloscope__container {\n\tposition: absolute;\n    top: 0;\n    left: 50%;\n    padding: 20px;\n    box-sizing: border-box;\n    /*background-color: rgba(0, 0, 0, 0.7);*/\n    z-index: 999;\n    border-radius: 10px;\n}\n\n.oscilloscope__animate {\n\t-webkit-transition: all 1s;\n\t-o-transition: all 1s;\n\ttransition: all 1s;\n}\n", "", {"version":3,"sources":["/./src/components/player/oscilloscope/oscilloscope.css"],"names":[],"mappings":"AAAA;;;;;;GAMG;;AAEH;CACC,mBAAmB;IAChB,OAAO;IACP,UAAU;IACV,cAAc;IACd,uBAAuB;IACvB,yCAAyC;IACzC,aAAa;IACb,oBAAoB;CACvB;;AAED;CACC,2BAA2B;CAC3B,sBAAsB;CACtB,mBAAmB;CACnB","file":"oscilloscope.css","sourcesContent":["/*******************************************************\n *\n *\n * Component Oscilloscope\n *\n * \n */\n\n.oscilloscope__container {\n\tposition: absolute;\n    top: 0;\n    left: 50%;\n    padding: 20px;\n    box-sizing: border-box;\n    /*background-color: rgba(0, 0, 0, 0.7);*/\n    z-index: 999;\n    border-radius: 10px;\n}\n\n.oscilloscope__animate {\n\t-webkit-transition: all 1s;\n\t-o-transition: all 1s;\n\ttransition: all 1s;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -32341,44 +32345,44 @@
 
 	'use strict';
 	
-	var _common = __webpack_require__(/*! ./common */ 492);
+	var _common = __webpack_require__(/*! ./common */ 493);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _bufferLoader = __webpack_require__(/*! ./bufferLoader */ 493);
+	var _bufferLoader = __webpack_require__(/*! ./bufferLoader */ 494);
 	
 	var _bufferLoader2 = _interopRequireDefault(_bufferLoader);
 	
-	var _underscore = __webpack_require__(/*! underscore */ 494);
+	var _underscore = __webpack_require__(/*! underscore */ 495);
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /***********************************************************************
+	                                                                                                                                                                                                     *                                                                   _
+	                                                                                                                                                                                                     *       _____  _                           ____  _                 |_|
+	                                                                                                                                                                                                     *      |  _  |/ \   ____  ____ __ ___     / ___\/ \   __   _  ____  _
+	                                                                                                                                                                                                     *      | |_| || |  / __ \/ __ \\ '_  \ _ / /    | |___\ \ | |/ __ \| |
+	                                                                                                                                                                                                     *      |  _  || |__. ___/. ___/| | | ||_|\ \___ |  _  | |_| |. ___/| |
+	                                                                                                                                                                                                     *      |_/ \_|\___/\____|\____||_| |_|    \____/|_| |_|_____|\____||_|
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     *      ================================================================
+	                                                                                                                                                                                                     *                 More than a coder, More than a designer
+	                                                                                                                                                                                                     *      ================================================================
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     *      - Document: sound.js
+	                                                                                                                                                                                                     *      - Author: aleen42
+	                                                                                                                                                                                                     *      - Description: core module for sound.js
+	                                                                                                                                                                                                     *      - Create Time: Aug 22nd, 2016
+	                                                                                                                                                                                                     *      - Update Time: Aug 22nd, 2016
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     **********************************************************************/
+	
 	var debugMode = true;
 	/** overidden console.log */
-	/***********************************************************************
-	 *                                                                   _
-	 *       _____  _                           ____  _                 |_|
-	 *      |  _  |/ \   ____  ____ __ ___     / ___\/ \   __   _  ____  _
-	 *      | |_| || |  / __ \/ __ \\ '_  \ _ / /    | |___\ \ | |/ __ \| |
-	 *      |  _  || |__. ___/. ___/| | | ||_|\ \___ |  _  | |_| |. ___/| |
-	 *      |_/ \_|\___/\____|\____||_| |_|    \____/|_| |_|_____|\____||_|
-	 *
-	 *      ================================================================
-	 *                 More than a coder, More than a designer
-	 *      ================================================================
-	 *
-	 *
-	 *      - Document: sound.js
-	 *      - Author: aleen42
-	 *      - Description: core module for sound.js
-	 *      - Create Time: Aug 22nd, 2016
-	 *      - Update Time: Aug 22nd, 2016
-	 *
-	 *
-	 **********************************************************************/
-	
 	if (!debugMode) {
 		console = {
 			log: function log() {}
@@ -32449,6 +32453,9 @@
 		/** @type {[type]} [a buffer loader object] */
 		this.bufferLoader = null;
 	
+		/** @type {Array} [for storing wave data of a song] */
+		this.waveData = [];
+	
 		/** [stopSource: clear sources when a source has been stopped] */
 		this.stopSource = function () {
 			if (this.source !== null) {
@@ -32484,50 +32491,54 @@
 	};
 	
 	Sound.prototype.init = function () {
+		var _this = this;
+	
 		/** Sound Init */
 		console.log('Sound Init');
 	
 		if (!_underscore2.default.isArray(this.url)) {
-			/** only load one source from an url */
-			/** initialize audio object with arrayBuffer type */
-			var request = new XMLHttpRequest();
-			request.open('GET', this.url, true);
-			request.responseType = 'arraybuffer';
+			(function () {
+				/** only load one source from an url */
+				/** initialize audio object with arrayBuffer type */
+				var request = new XMLHttpRequest();
+				request.open('GET', _this.url, true);
+				request.responseType = 'arraybuffer';
 	
-			request.addEventListener('pogress', function (evt) {
-				if (evt.lengthComputable) {
-					this.progressEvent(evt.loaded / evt.total * 0.7 * 100 + '%');
-				}
-			}, false);
+				request.addEventListener('pogress', function (evt) {
+					if (evt.lengthComputable) {
+						this.progressEvent(evt.loaded / evt.total * 0.7 * 100 + '%');
+					}
+				}, false);
 	
-			/** Decode asynchronously */
-			request.onload = function () {
-				console.log('Source has been loaded');
+				/** Decode asynchronously */
+				request.onload = function () {
+					console.log('Source has been loaded');
 	
-				this.context.decodeAudioData(request.response, function (buffer) {
-					console.log('Source has been decoded');
+					this.context.decodeAudioData(request.response, function (buffer) {
+						console.log('Source has been decoded');
 	
-					this.bufferList.push({
-						title: _common2.default.extractTitle(this.url),
-						buffer: buffer
+						this.bufferList.push({
+							title: _common2.default.extractTitle(this.url),
+							buffer: buffer
+						});
+	
+						this.progressEvent(evt.loaded / evt.total * 1.0 * 100 + '%');
+	
+						if (this.loadEvent) {
+							this.loadEvent();
+						}
+	
+						if (this.decodedEvent) {
+							this.decodedEvent();
+						}
+					}.bind(this), function () {
+						/** catch error */
+						_common2.default.errorPrint('Failed to get buffer from this url');
 					});
+				}.bind(_this);
 	
-					this.progressEvent(evt.loaded / evt.total * 1.0 * 100 + '%');
-	
-					if (this.loadEvent) {
-						this.loadEvent();
-					}
-	
-					if (this.decodedEvent) {
-						this.decodedEvent();
-					}
-				}.bind(this), function () {
-					/** catch error */
-					_common2.default.errorPrint('Failed to get buffer from this url');
-				});
-			}.bind(this);
-	
-			request.send();
+				request.send();
+			})();
 		} else {
 			this.bufferLoader = new _bufferLoader2.default(this.context, this.url, function (bufferList) {
 				this.bufferList = bufferList;
@@ -32622,7 +32633,7 @@
 	};
 	
 	Sound.prototype.play = function (isJump, isFirst) {
-		var _this = this;
+		var _this2 = this;
 	
 		isJump = isJump || false;
 		isFirst = isFirst || false;
@@ -32644,10 +32655,13 @@
 	
 		this.source.buffer = this.bufferList[this.currentIndex].buffer; /** tell the source which sound to play 								*/
 	
+		/**
+	  * source -> analyser
+	  * 		  -> destination
+	  */
 		/** adding a analyser between the source and the destination */
 		this.source.connect(this.analyser);
-		this.analyser.connect(this.context.destination);
-		// this.source.connect(this.context.destination);       				/** connect the source to the context's destination (the speakers) 		*/
+		this.source.connect(this.context.destination); /** connect the source to the context's destination (the speakers) 		*/
 	
 		this.source.start(0); /** play the source now 												*/
 		/** note: on older systems, may have to use deprecated noteOn(time); 	*/
@@ -32666,7 +32680,7 @@
 						/** use requestAnimationFrame to calling playing event */
 						requestAnimationFrame(playingUpdate);
 					}
-				}.bind(_this);
+				}.bind(_this2);
 	
 				requestAnimationFrame(playingUpdate);
 			})();
@@ -32784,41 +32798,82 @@
 		return this.bufferList[this.currentIndex].buffer.getChannelData(index);
 	};
 	
-	Sound.prototype.getOscilloscopeData = function (pixels) {
+	Sound.prototype.getOscilloscopeData = function (pixels, type) {
+		type = type || 'byte';
+	
 		this.analyser.fftSize = pixels;
+		this.analyser.maxDecibels = 10;
 	
-		var bufferLength = this.analyser.frequencyBinCount;
-		var dataArray = new Uint8Array(bufferLength);
-		this.analyser.getByteFrequencyData(dataArray);
+		var bufferLength = 0;
+		var dataArray = [];
 	
-		var filterData = [];
 		var returnData = [];
+		var filterData = [];
 	
 		/** filter frequency data */
-		var periods = [[0.1, 0.2], [0.3, 0.4], [0.6, 0.7], [0.8, 0.9]];
+		var periods = [
+		// [0.1, 0.2],
+		// [0.3, 0.4],
+		// [0.6, 0.7],
+		// [0.8, 0.9]
+		[0, 1]];
 	
-		for (var period = 0; period < periods.length; period++) {
-			for (var i = parseInt(periods[period][0] * dataArray.length); i < parseInt(periods[period][1] * dataArray.length); i += 1) {
-				filterData.push(dataArray[i]);
-			}
+		switch (type) {
+			case 'byte':
+				bufferLength = this.analyser.frequencyBinCount;
+				dataArray = new Uint8Array(bufferLength);
+				this.analyser.getByteFrequencyData(dataArray);
+	
+				for (var period = 0; period < periods.length; period++) {
+					for (var i = parseInt(periods[period][0] * dataArray.length); i < parseInt(periods[period][1] * dataArray.length); i += 1) {
+						if (typeof dataArray[i] !== 'undefined') {
+							filterData.push(dataArray[i]);
+						}
+					}
+				}
+	
+				break;
+			case 'float':
+				bufferLength = this.analyser.frequencyBinCount;
+				dataArray = new Float32Array(bufferLength);
+				this.analyser.getFloatFrequencyData(dataArray);
+	
+				var min = Math.min.apply(Math, _toConsumableArray(dataArray));
+	
+				for (var _period = 0; _period < periods.length; _period++) {
+					for (var _i = parseInt(periods[_period][0] * dataArray.length); _i < parseInt(periods[_period][1] * dataArray.length); _i += 1) {
+						filterData.push((dataArray[_i] - min) * 2);
+					}
+				}
+				break;
+			default:
+				break;
 		}
+	
+		/** consider gain */
+		// const currentItem = Math.floor((this.getCurrentTime() * this.getSampleRate() / this.getDataLength()) * this.waveData.length);
+		// const maxWave = Math.max(...this.waveData);
 	
 		/** get the max value */
 		var max = Math.max.apply(Math, filterData);
 	
-		for (var _i = 0; _i < filterData.length; _i++) {
-			returnData.push({ value: max === 0 ? 0 : filterData[_i] / max });
+		for (var _i2 = 0; _i2 < filterData.length; _i2++) {
+			returnData.push({ value: typeof filterData[_i2] === 'undefined' || _underscore2.default.isNaN(filterData[_i2]) ? 0 : filterData[_i2] });
+			// returnData.push({ value: (max === 0 || typeof filterData[i] === 'undefined' || _.isNaN(filterData[i]) || _.isNaN(max)) ? 0 : filterData[i] / max });
 		}
 	
 		return returnData;
 	};
 	
 	Sound.prototype.getWaveData = function (pixels) {
-		var waveData = this.summarize(this.bufferList[this.currentIndex].buffer.getChannelData(0), pixels);
+		this.waveData = this.summarize(this.bufferList[this.currentIndex].buffer.getChannelData(0), pixels).map(function (wave, i) {
+			return wave[1];
+		});
+	
 		var returnData = [];
 	
-		for (var i = 0; i < waveData.length; i += 1) {
-			returnData.push({ value: waveData[i][1], fill: 'rgba(0, 0, 0, 0.1)' });
+		for (var i = 0; i < this.waveData.length; i += 1) {
+			returnData.push({ value: this.waveData[i], fill: 'rgba(0, 0, 0, 0.1)' });
 		}
 	
 		return returnData;
@@ -32826,6 +32881,20 @@
 
 /***/ },
 /* 492 */
+/*!******************************!*\
+  !*** ./assets/songlist.json ***!
+  \******************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"data": [
+			"http://share.soundtooth.cn/Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3",
+			"http://share.soundtooth.cn/Kygo - ID (Ultra Music Festival Anthem).mp3"
+		]
+	};
+
+/***/ },
+/* 493 */
 /*!*******************************!*\
   !*** ./src/modules/common.js ***!
   \*******************************/
@@ -32873,7 +32942,7 @@
 	};
 
 /***/ },
-/* 493 */
+/* 494 */
 /*!*************************************!*\
   !*** ./src/modules/bufferLoader.js ***!
   \*************************************/
@@ -32881,7 +32950,7 @@
 
 	'use strict';
 	
-	var _common = __webpack_require__(/*! ./common */ 492);
+	var _common = __webpack_require__(/*! ./common */ 493);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -33036,7 +33105,7 @@
 	};
 
 /***/ },
-/* 494 */
+/* 495 */
 /*!************************************!*\
   !*** ./~/underscore/underscore.js ***!
   \************************************/
@@ -34591,19 +34660,6 @@
 	  }
 	}.call(this));
 
-
-/***/ },
-/* 495 */
-/*!******************************!*\
-  !*** ./assets/songlist.json ***!
-  \******************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-		"data": [
-			"http://share.soundtooth.cn/Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3"
-		]
-	};
 
 /***/ }
 /******/ ]);
