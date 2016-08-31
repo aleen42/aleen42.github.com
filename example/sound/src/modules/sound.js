@@ -24,7 +24,7 @@ import Common from './common';
 import BufferLoader from './bufferLoader';
 import _ from 'underscore';
 
-const debugMode = true;
+const debugMode = false;
 /** overidden console.log */
 if (!debugMode) {
 	console = {
@@ -454,7 +454,7 @@ Sound.prototype.getOscilloscopeData = function (pixels, type) {
 	type = type || 'byte';
 
 	this.analyser.fftSize = pixels;
-	this.analyser.maxDecibels = 10;
+	this.analyser.maxDecibels = 20;
 
 	let bufferLength = 0;
 	let dataArray = [];

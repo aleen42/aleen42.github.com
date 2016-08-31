@@ -31488,7 +31488,7 @@
 					/** ensure not jump too fast */
 					for (var i = 0; i <= currentItem; i++) {
 						if (typeof this.refs['wave__tag' + i] !== 'undefined') {
-							this.refs['wave__tag' + i].setAttribute('fill', 'rgba(0, 0, 0, 1)');
+							this.refs['wave__tag' + i].setAttribute('fill', 'rgba(0, 0, 0, 0.3)');
 						}
 					}
 				}
@@ -32412,7 +32412,7 @@
 	                                                                                                                                                                                                     *
 	                                                                                                                                                                                                     **********************************************************************/
 	
-	var debugMode = true;
+	var debugMode = false;
 	/** overidden console.log */
 	if (!debugMode) {
 		console = {
@@ -32851,7 +32851,7 @@
 		type = type || 'byte';
 	
 		this.analyser.fftSize = pixels;
-		this.analyser.maxDecibels = 10;
+		this.analyser.maxDecibels = 20;
 	
 		var bufferLength = 0;
 		var dataArray = [];
