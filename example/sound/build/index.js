@@ -113,7 +113,7 @@
 	  _react2.default.createElement(_loading.Loading, { className: 'loading', soundObject: sound })
 	), document.querySelectorAll('.loading__container')[0]);
 	
-	var setIndex = Math.floor(Math.random() * (_songlist2.default.data.length - 1));
+	var setIndex = Math.floor(Math.random() * _songlist2.default.data.length);
 	
 	sound.set(setIndex).onload(function () {
 	  console.log('Rendering...');
@@ -30870,6 +30870,8 @@
 	
 			_this.prev = _this.prev.bind(_this);
 			_this.next = _this.next.bind(_this);
+			_this.pause = _this.pause.bind(_this);
+			_this.resume = _this.resume.bind(_this);
 	
 			_this.state = {
 				activeIndex: _this.props.setIndex
@@ -30915,6 +30917,26 @@
 				}.bind(this), 500);
 			}
 		}, {
+			key: 'pause',
+			value: function pause() {
+				console.log('Pause');
+				this.props.soundObject.pause();
+	
+				this.refs['player__play-pause'].children[0].removeEventListener('click', this.pause);
+				this.refs['player__play-pause'].children[0].setAttribute('class', 'fa fa-play');
+				this.refs['player__play-pause'].children[0].addEventListener('click', this.resume);
+			}
+		}, {
+			key: 'resume',
+			value: function resume() {
+				console.log('Resume');
+				this.props.soundObject.resume();
+	
+				this.refs['player__play-pause'].children[0].removeEventListener('click', this.resume);
+				this.refs['player__play-pause'].children[0].setAttribute('class', 'fa fa-pause');
+				this.refs['player__play-pause'].children[0].addEventListener('click', this.pause);
+			}
+		}, {
 			key: 'updateTime',
 			value: function updateTime(time) {
 				this.refs.wave__time.children[1].innerText = time;
@@ -30928,6 +30950,10 @@
 			key: 'componentDidMount',
 			value: function componentDidMount() {
 				console.log('Player Mounted');
+	
+				/** bind listner of play-pause button */
+				this.refs['player__play-pause'].children[0].setAttribute('class', 'fa fa-pause');
+				this.refs['player__play-pause'].children[0].addEventListener('click', this.pause);
 	
 				/** play when component mount */
 				this.updateTitle(this.props.soundObject.getTitle());
@@ -31004,13 +31030,18 @@
 						_react2.default.createElement(
 							'div',
 							{ className: 'player__prev', onClick: this.prev },
-							_react2.default.createElement('i', { className: 'fa fa-angle-left' })
+							_react2.default.createElement('i', { className: 'fa fa-chevron-left' })
 						),
 						_react2.default.createElement(_wave.Wave, { sound: this.props.soundObject, ref: 'wave', currentIndex: 0, width: '100%', height: 280 }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'player__next', onClick: this.next },
-							_react2.default.createElement('i', { className: 'fa fa-angle-right' })
+							_react2.default.createElement('i', { className: 'fa fa-chevron-right' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'player__play-pause', ref: 'player__play-pause' },
+							_react2.default.createElement('i', { className: '' })
 						)
 					),
 					_react2.default.createElement(_oscilloscope.Oscilloscope, { ref: 'oscilloscope', sound: this.props.soundObject, width: '100%', height: 200 }),
@@ -31063,7 +31094,7 @@
 	
 	
 	// module
-	exports.push([module.id, "/*******************************************************\n *\n *\n * Component Player\n *\n * \n */\n\n.player__container {\n\tmargin: 0 10%;\n}\n\n.player__prev,\n.player__next {\n\tfont-size: 30px;\n\tposition: absolute;\n    top: 50%;\n    line-height: 60px;\n    color: rgba(0, 0, 0, 0.1);\n    height: 60px;\n    margin-top: -30px;\n    cursor: pointer;\n\n    -webkit-transition: all 0.5s;\n    -o-transition: all 0.5s;\n    transition: all 0.5s;\n}\n\n.player__prev:hover,\n.player__next:hover {\n\tcolor: rgba(0, 0, 0, 1);\n}\n\n.player__prev {\n\tleft: -25px;\n}\n\n.player__next {\n\tright: -25px;\n}\n\n.wave__wrapper {\n    position: relative;\n}\n", "", {"version":3,"sources":["/./src/components/player/player.css"],"names":[],"mappings":"AAAA;;;;;;GAMG;;AAEH;CACC,cAAc;CACd;;AAED;;CAEC,gBAAgB;CAChB,mBAAmB;IAChB,SAAS;IACT,kBAAkB;IAClB,0BAA0B;IAC1B,aAAa;IACb,kBAAkB;IAClB,gBAAgB;;IAEhB,6BAA6B;IAC7B,wBAAwB;IACxB,qBAAqB;CACxB;;AAED;;CAEC,wBAAwB;CACxB;;AAED;CACC,YAAY;CACZ;;AAED;CACC,aAAa;CACb;;AAED;IACI,mBAAmB;CACtB","file":"player.css","sourcesContent":["/*******************************************************\n *\n *\n * Component Player\n *\n * \n */\n\n.player__container {\n\tmargin: 0 10%;\n}\n\n.player__prev,\n.player__next {\n\tfont-size: 30px;\n\tposition: absolute;\n    top: 50%;\n    line-height: 60px;\n    color: rgba(0, 0, 0, 0.1);\n    height: 60px;\n    margin-top: -30px;\n    cursor: pointer;\n\n    -webkit-transition: all 0.5s;\n    -o-transition: all 0.5s;\n    transition: all 0.5s;\n}\n\n.player__prev:hover,\n.player__next:hover {\n\tcolor: rgba(0, 0, 0, 1);\n}\n\n.player__prev {\n\tleft: -25px;\n}\n\n.player__next {\n\tright: -25px;\n}\n\n.wave__wrapper {\n    position: relative;\n}\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "/*******************************************************\n *\n *\n * Component Player\n *\n * \n */\n\n.player__container {\n\tmargin: 0 10%;\n}\n\n.player__prev,\n.player__next,\n.player__play-pause {\n\tfont-size: 20px;\n\tposition: absolute;\n    line-height: 100px;\n    color: rgba(0, 0, 0, 0.1);\n    height: 100px;\n    width: 100px;\n}\n\n.player__prev > i,\n.player__next > i,\n.player__play-pause > i {\n    -webkit-transition: all 0.5s;\n    -o-transition: all 0.5s;\n    transition: all 0.5s;\n    cursor: pointer;\n}\n\n.player__prev > i:hover,\n.player__next > i:hover,\n.player__play-pause > i:hover {\n\tcolor: rgba(0, 0, 0, 1);\n}\n\n.player__prev,\n.player__next,\n.player__play-pause {\n    margin-top: -50px;\n    top: 50%;\n}\n\n.player__play-pause {\n    left: 50%;\n    margin-left: -50px;\n}\n\n.player__prev {\n\tleft: -75px;\n}\n\n.player__next {\n\tright: -75px;\n}\n\n.wave__wrapper {\n    position: relative;\n}\n", "", {"version":3,"sources":["/./src/components/player/player.css"],"names":[],"mappings":"AAAA;;;;;;GAMG;;AAEH;CACC,cAAc;CACd;;AAED;;;CAGC,gBAAgB;CAChB,mBAAmB;IAChB,mBAAmB;IACnB,0BAA0B;IAC1B,cAAc;IACd,aAAa;CAChB;;AAED;;;IAGI,6BAA6B;IAC7B,wBAAwB;IACxB,qBAAqB;IACrB,gBAAgB;CACnB;;AAED;;;CAGC,wBAAwB;CACxB;;AAED;;;IAGI,kBAAkB;IAClB,SAAS;CACZ;;AAED;IACI,UAAU;IACV,mBAAmB;CACtB;;AAED;CACC,YAAY;CACZ;;AAED;CACC,aAAa;CACb;;AAED;IACI,mBAAmB;CACtB","file":"player.css","sourcesContent":["/*******************************************************\n *\n *\n * Component Player\n *\n * \n */\n\n.player__container {\n\tmargin: 0 10%;\n}\n\n.player__prev,\n.player__next,\n.player__play-pause {\n\tfont-size: 20px;\n\tposition: absolute;\n    line-height: 100px;\n    color: rgba(0, 0, 0, 0.1);\n    height: 100px;\n    width: 100px;\n}\n\n.player__prev > i,\n.player__next > i,\n.player__play-pause > i {\n    -webkit-transition: all 0.5s;\n    -o-transition: all 0.5s;\n    transition: all 0.5s;\n    cursor: pointer;\n}\n\n.player__prev > i:hover,\n.player__next > i:hover,\n.player__play-pause > i:hover {\n\tcolor: rgba(0, 0, 0, 1);\n}\n\n.player__prev,\n.player__next,\n.player__play-pause {\n    margin-top: -50px;\n    top: 50%;\n}\n\n.player__play-pause {\n    left: 50%;\n    margin-left: -50px;\n}\n\n.player__prev {\n\tleft: -75px;\n}\n\n.player__next {\n\tright: -75px;\n}\n\n.wave__wrapper {\n    position: relative;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -32441,6 +32472,8 @@
 		this.startTime = 0.0;
 		this.startContextTime = 0.0;
 	
+		this.pauseOffset = 0;
+	
 		/** @type {Array} [thread of tracking] */
 		// this.startTrackings = [null, null];
 	
@@ -32457,14 +32490,21 @@
 		this.waveData = [];
 	
 		/** [stopSource: clear sources when a source has been stopped] */
-		this.stopSource = function () {
+		this.stopSource = function (isPause) {
 			if (this.source !== null) {
+				if (isPause) {
+					this.status = 'pause'; /** update current status to 'pause'									*/
+					this.source.onended = null; /** clear source ended function 										*/
+				} else {
+					this.status = 'stop'; /** update current status to 'stop'										*/
+				}
+	
 				this.source.stop(); /** clear source node 													*/
 			}
 	
-			this.status = 'stop'; /** update current status to 'stop'										*/
-	
-			this.endedEvent(); /** calling ended event 												*/
+			if (!isPause) {
+				this.endedEvent(); /** calling ended event 												*/
+			}
 	
 			/** another way of what requestAnimationFrame has done */
 			// const curretTrackingThreadIndex = (this.startTrackings.indexOf(null) + 1) % this.startTrackings.length;
@@ -32472,8 +32512,6 @@
 			// 	clearInterval(this.startTrackings[curretTrackingThreadIndex]);	/** clear tracking time interval object for playingEvent				*/
 			// 	this.startTrackings[curretTrackingThreadIndex] = null;
 			// }.bind(this), 500);
-	
-			this.startTime = new Date(); /** refresh startTime 													*/
 		}.bind(this);
 	
 		/** initialize context object */
@@ -32632,6 +32670,16 @@
 		return this;
 	};
 	
+	Sound.prototype.pause = function () {
+		this.pauseOffset = this.getCurrentTime();
+		this.stopSource(true);
+	};
+	
+	Sound.prototype.resume = function () {
+		this.play(false, false);
+		this.pauseOffset = 0;
+	};
+	
 	Sound.prototype.play = function (isJump, isFirst) {
 		var _this2 = this;
 	
@@ -32647,7 +32695,7 @@
 			this.source.onended = null;
 		}
 	
-		this.stopSource(); /** stop and clear source firstly										*/
+		this.stopSource(false); /** stop and clear source firstly										*/
 	
 		this.source = this.context.createBufferSource(); /** create a sound source 												*/
 	
@@ -32663,9 +32711,10 @@
 		this.source.connect(this.analyser);
 		this.source.connect(this.context.destination); /** connect the source to the context's destination (the speakers) 		*/
 	
-		this.source.start(0); /** play the source now 												*/
+		this.source.start(0, this.pauseOffset); /** play the source now 												*/
 		/** note: on older systems, may have to use deprecated noteOn(time); 	*/
-		this.startTime = new Date();
+		/** refresh startTime */
+		this.startTime = new Date(new Date().valueOf() - this.pauseOffset * 1000);
 		this.status = 'play'; /** update current status to 'play'										*/
 	
 		if (this.playingEvent) {
