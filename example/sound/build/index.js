@@ -30873,8 +30873,11 @@
 			_this.pause = _this.pause.bind(_this);
 			_this.resume = _this.resume.bind(_this);
 	
+			_this.filter = _this.filter.bind(_this);
+	
 			_this.state = {
-				activeIndex: _this.props.setIndex
+				activeIndex: _this.props.setIndex,
+				filterType: _this.props.filterDefaultType
 			};
 			return _this;
 		}
@@ -30925,6 +30928,14 @@
 				this.refs['player__play-pause'].children[0].removeEventListener('click', this.pause);
 				this.refs['player__play-pause'].children[0].setAttribute('class', 'fa fa-play');
 				this.refs['player__play-pause'].children[0].addEventListener('click', this.resume);
+			}
+		}, {
+			key: 'filter',
+			value: function filter(e) {
+				this.props.soundObject.setFilterType(e.target.value);
+				this.setState({
+					filterType: e.target.value
+				});
 			}
 		}, {
 			key: 'resume',
@@ -31052,6 +31063,10 @@
 	
 		return Player;
 	}(_react2.default.Component);
+	
+	Player.defaultProps = {
+		filterDefaultType: 'lowpass'
+	};
 
 /***/ },
 /* 469 */
@@ -32429,7 +32444,10 @@
 		/** @type {[type]} [Audio Context Object] */
 		this.context = null;
 	
-		/** @type {[type]} [Audio Analyser between the source and the destination] */
+		/** @type {[type]} [Audio filter between the source and the analyser] */
+		this.filter = null;
+	
+		/** @type {[type]} [Audio Analyser to generate oscilloscope] */
 		this.analyser = null;
 	
 		/** @type {[type]} [onload function will be called when loading successfully] */
@@ -32703,11 +32721,16 @@
 		this.source.buffer = this.bufferList[this.currentIndex].buffer; /** tell the source which sound to play 								*/
 	
 		/**
-	  * source -> analyser
+	  * source -> filter -> analyser
 	  * 		  -> destination
 	  */
 		/** adding a analyser between the source and the destination */
-		this.source.connect(this.analyser);
+		this.filter = this.context.createBiquadFilter();
+		this.filter.type = 'bandpass';
+	
+		this.source.connect(this.filter);
+		this.filter.connect(this.analyser);
+	
 		this.source.connect(this.context.destination); /** connect the source to the context's destination (the speakers) 		*/
 	
 		this.source.start(0, this.pauseOffset); /** play the source now 												*/
@@ -32810,6 +32833,10 @@
 		return vals;
 	};
 	
+	Sound.prototype.setFilterType = function (type) {
+		this.filter.type = type;
+	};
+	
 	/**
 	 *
 	 *
@@ -32850,7 +32877,7 @@
 		type = type || 'byte';
 	
 		this.analyser.fftSize = pixels;
-		this.analyser.maxDecibels = 20;
+		this.analyser.maxDecibels = 15;
 	
 		var bufferLength = 0;
 		var dataArray = [];
