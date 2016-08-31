@@ -69,7 +69,7 @@
 	
 	var _sound2 = _interopRequireDefault(_sound);
 	
-	var _songlist = __webpack_require__(/*! ./../assets/songlist.json */ 492);
+	var _songlist = __webpack_require__(/*! ./../assets/songlist.json */ 495);
 	
 	var _songlist2 = _interopRequireDefault(_songlist);
 	
@@ -31479,10 +31479,7 @@
 					return;
 				}
 	
-				if (currentItem === 0) {
-					this.clearWave();
-					return;
-				}
+				this.clearWave();
 	
 				if (typeof this.refs['wave__tag' + currentItem] != 'undefined') {
 					/** ensure not jump too fast */
@@ -32376,15 +32373,15 @@
 
 	'use strict';
 	
-	var _common = __webpack_require__(/*! ./common */ 493);
+	var _common = __webpack_require__(/*! ./common */ 492);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _bufferLoader = __webpack_require__(/*! ./bufferLoader */ 494);
+	var _bufferLoader = __webpack_require__(/*! ./bufferLoader */ 493);
 	
 	var _bufferLoader2 = _interopRequireDefault(_bufferLoader);
 	
-	var _underscore = __webpack_require__(/*! underscore */ 495);
+	var _underscore = __webpack_require__(/*! underscore */ 494);
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
@@ -32932,20 +32929,6 @@
 
 /***/ },
 /* 492 */
-/*!******************************!*\
-  !*** ./assets/songlist.json ***!
-  \******************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-		"data": [
-			"http://share.soundtooth.cn/Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3",
-			"http://share.soundtooth.cn/Kygo - ID (Ultra Music Festival Anthem).mp3"
-		]
-	};
-
-/***/ },
-/* 493 */
 /*!*******************************!*\
   !*** ./src/modules/common.js ***!
   \*******************************/
@@ -32993,7 +32976,7 @@
 	};
 
 /***/ },
-/* 494 */
+/* 493 */
 /*!*************************************!*\
   !*** ./src/modules/bufferLoader.js ***!
   \*************************************/
@@ -33001,7 +32984,7 @@
 
 	'use strict';
 	
-	var _common = __webpack_require__(/*! ./common */ 493);
+	var _common = __webpack_require__(/*! ./common */ 492);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -33156,7 +33139,7 @@
 	};
 
 /***/ },
-/* 495 */
+/* 494 */
 /*!************************************!*\
   !*** ./~/underscore/underscore.js ***!
   \************************************/
@@ -34711,6 +34694,20 @@
 	  }
 	}.call(this));
 
+
+/***/ },
+/* 495 */
+/*!******************************!*\
+  !*** ./assets/songlist.json ***!
+  \******************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"data": [
+			"http://share.soundtooth.cn/Pegato,SNBRN,Andrew Watt - Beat The Sunrise feat. Andrew Watt (Pegato Remix).mp3",
+			"http://share.soundtooth.cn/Kygo - ID (Ultra Music Festival Anthem).mp3"
+		]
+	};
 
 /***/ }
 /******/ ]);
