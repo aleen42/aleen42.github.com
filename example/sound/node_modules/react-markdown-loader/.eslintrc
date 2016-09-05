@@ -1,0 +1,9 @@
+{
+  "extends": [ "fernandopasik", "fernandopasik/es6", "fernandopasik/react" ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "script"
+  }
+}
