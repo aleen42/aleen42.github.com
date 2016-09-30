@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draw | Image to SVG</title>
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<script type="text/javascript" src="src/konva-1.2.1.min.js"></script>
+</head>
+<body>
+	<div class="container__wrapper">
+		<div class="container__notice container__absolute">
+			<p class="paragraph-padding">Just drag and drop an image into the box with <span class="font-a10000 font-bold">RED</span> border</p>
+			<p class="paragraph-padding">Resize images with the key <code>shift</code>, can keep the aspect ratio</p>
+		</div>
+		<div class="container__options container__absolute">
+			<div class="process__type">
+				<select id="process__type">
+					<option value="preview" selected>Preview</option>
+					<option value="save">Save</option>
+				</select>
+			</div>
+			<div class="process__type">
+				<span class="checkbox__color"></span><label for="process__draw-color">Color</label><input type="checkbox" id="process__draw-color"/>
+			</div>
+		</div>
+		<div class="container__info container__absolute"></div>
+		<div class="button__absolute">
+			<div class="button button__inline" id="clear__button">Clear</div>
+			<div class="button button__inline" id="process__button">Process</div>
+		</div>
+		<div class="container" id="container">
+			<!-- <canvas class="canvas__panel" id="canvas"></canvas> -->
+		</div>
+	</div>
+	<img src="./assets/nib.png" id="nib" style="display: none" />
+	<script type="text/javascript" src="src/index.min.js"></script>
+</body>
+</html>
