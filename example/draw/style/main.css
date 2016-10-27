@@ -116,7 +116,8 @@ code {
     display: inline-block;
     border: 2px solid black;
     margin-right: 5px;
-    position: relative
+    position: relative;
+    cursor: pointer;
 }
 
 .checkbox__color-selected::after {
@@ -135,10 +136,32 @@ code {
 	line-height: 30px;
 	vertical-align: middle;
 	display: inline-block;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	cursor: pointer;
 }
 
 #process__draw-color {
 	display: none;
+}
+
+.process__type {
+	display: inline-block;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.process__type > select {
+	cursor: pointer;
 }
 
 .canvas__panel {
