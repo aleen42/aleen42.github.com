@@ -201,3 +201,60 @@ code {
     -o-transform: translateY(-100px);
     transform: translateY(-100px);
 }
+
+.button__add {
+	display: none;
+}
+
+#picture {
+	display: none;
+}
+
+/**
+ * Mobile
+ */
+@media (max-width: 720px) {
+	.container__options {
+		z-index: 99;
+		left: 20px;
+		bottom: 20px;
+		max-width: 60px;
+	}
+
+	.container__info {
+		font-size: 10px;
+	}
+
+	.button__add {
+		display: block;
+	    width: 60px;
+	    height: 60px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin: -30px 0 0 -30px;
+
+	    background-image: url(./../assets/add-btn.png);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+
+	    z-index: 99;
+
+	    -webkit-transition: all 0.8s;
+	    -o-transition: all 0.8s;
+	    transition: all 0.8s;
+	}
+
+	#select__options {
+		display: none;
+	}
+
+	.container__notice {
+		display: none;
+	}
+
+	.button__absolute {
+		z-index: 99;
+	}
+}

@@ -4,6 +4,7 @@
 	<title>Draw | Image to SVG</title>
 	<link rel="stylesheet" type="text/css" href="style/main.css">
 	<link rel="shortcut icon" href="./favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">	
 	<script type="text/javascript" src="src/konva-1.2.1.min.js"></script>
 </head>
 <body>
@@ -13,7 +14,7 @@
 			<p class="paragraph-padding">Resize images with the key <code>shift</code>, can keep the aspect ratio</p>
 		</div>
 		<div class="container__options container__absolute">
-			<div class="process__type">
+			<div id="select__options" class="process__type">
 				<select id="process__type">
 					<option value="preview" selected>Preview</option>
 					<option value="save">Save</option>
@@ -31,6 +32,7 @@
 		<div class="container" id="container">
 			<!-- <canvas class="canvas__panel" id="canvas"></canvas> -->
 		</div>
+		<input type="file" id="picture">
 	</div>
 	<img src="./assets/nib.png" id="nib" style="display: none" />
 	<script type="text/javascript" src="src/ccapture.min.js"></script>
