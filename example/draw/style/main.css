@@ -257,4 +257,8 @@ code {
 	.button__absolute {
 		z-index: 99;
 	}
+	
+	.button {
+		width: 80px;
+	}
 }
