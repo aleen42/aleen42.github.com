@@ -103,7 +103,7 @@ code {
 .container__notice {
 	left: 0;
 	bottom: 20px;
-	width: 50%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -176,8 +176,7 @@ code {
 
 .notice__drop {
 	z-index: 0;
-
-	width: 600px;
+	min-width: 300px;
     height: 200px;
     border: 3px dotted #000;
     border-radius: 10px;
@@ -256,9 +255,5 @@ code {
 
 	.button__absolute {
 		z-index: 99;
-	}
-	
-	.button {
-		width: 80px;
 	}
 }
