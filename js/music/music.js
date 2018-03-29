@@ -12,11 +12,6 @@ if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg"))
 	list=
 	[
 		'群星 - いつか気付くかな.mp3',
-		'群星 - お砂糖ふたつ.mp3',
-		'群星 - ともしび.mp3',
-		'群星 - 少年たちとの別れ.mp3',
-		'群星 - 幻日.mp3',
-		'群星 - 降り続く雨の街で.mp3',
 		'群星 - 恋心を奏でる綺想曲.mp3'
 	]
 	
